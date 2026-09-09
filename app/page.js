@@ -59,19 +59,11 @@ export default function Home(){return <main>
 </section>
 </div>
 
-<section id="about" className="story">
- <div className="storyArt" aria-hidden="true"></div>
- <div className="storyShade"></div>
- <div className="storyInner">
-  <div className="storyCopy">
-   <p className="eyebrow">OUR STORY</p>
-   <h2>Education gives us roots.<br/><em>Creativity gives us wings.</em></h2>
-   <p className="chinese">以教育扎根，以创意展翅。</p>
-   <p className="storyBody">At Kunaris Education &amp; Media Inc., we believe in the power of learning and creativity to bring people closer together and to create a more open, connected and meaningful world.</p>
-   <a className="storyButton" href="#">Our Story <Arrow/></a>
-  </div>
-  <div className="storyQuote">From a deeper world<br/>to a brighter tomorrow.</div>
- </div>
+<section id="about" className="storyFinal">
+  <img
+    src="/our-story-final.png"
+    alt="Our Story — Education gives us roots. Creativity gives us wings. 以教育扎根，以创意展翅。 From a deeper world to a brighter tomorrow."
+  />
 </section>
 
 <section className="values shell">
