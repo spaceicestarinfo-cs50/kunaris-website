@@ -1,12 +1,64 @@
-const A=()=> <span>↗</span>;
+
+const Arrow=()=> <span aria-hidden="true">→</span>;
 export default function Home(){return <main>
-<header><a className="brand" href="#"><b>◒</b> KUNARIS</a><nav><a href="#choose">Explore</a><a href="#why">About</a><a href="#circle">Kunaris Circle</a><a className="contact" href="mailto:hello@kunaris.ca">Contact</a></nav></header>
-<section className="hero"><div><p className="eyebrow">EDUCATION · CREATIVE · DIGITAL</p><h1>Learn.<br/>Create.<br/><em>Connect.</em></h1><h3>Learning for you.<br/>Creative & digital solutions for your business.</h3><p className="lead">From language learning and practical skills to websites, apps, interactive learning experiences, videos, branding and more.</p><a className="link" href="#choose">Find what you need <A/></a></div><div className="art"><i className="halo"/><i className="orb big"/><i className="orb small"/><i className="wing w1"/><i className="wing w2"/></div></section>
-<section id="choose" className="choose">
-<a className="card you" href="/for-you"><div><p className="eyebrow">01 · PERSONAL</p><h2>FOR YOU</h2><h4>I want to learn & grow.</h4></div><div><p className="services">Languages · Practical Skills · Learning Experiences</p><strong>Explore for you <A/></strong></div></a>
-<a className="card biz" href="/for-business"><div><p className="eyebrow">02 · BUSINESS</p><h2>FOR YOUR<br/>BUSINESS</h2><h4>I need something created.</h4></div><div><p className="services">Websites · Apps · Learning Games · Videos · Branding · Printing</p><strong>Explore for your business <A/></strong></div></a>
+<header className="siteHeader">
+  <a className="logoLockup" href="#">
+    <img className="sphereLogo" src="/kunaris-sphere.png" alt=""/>
+    <img className="wordmarkLogo" src="/kunaris-wordmark.png" alt="Kunaris Education & Media"/>
+  </a>
+  <nav className="mainNav">
+    <a href="#for-you">For You</a><a href="#for-business">For Your Business</a>
+    <a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a>
+    <a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a>
+    <a className="signInButton" href="#circle">Sign In <Arrow/></a>
+    <button className="languageButton" type="button">◎ EN⌄</button>
+  </nav>
+</header>
+
+<div className="pageShell">
+<section className="hero">
+  <div className="heroCopy">
+    <p className="eyebrow">PEOPLE · IDEAS · A BRIGHTER TOMORROW</p>
+    <h1>Learn. Create.<br/><em>Connect.</em></h1>
+    <p className="heroStatement">Education and creative digital solutions for a more open and brighter world.</p>
+    <p className="heroDetail">Learning for you. Websites, apps, learning tools, videos, branding and more for your business.</p>
+    <a className="discoverLink" href="#pathways">Discover Kunaris <Arrow/></a>
+  </div>
+  <div className="heroVisual" aria-hidden="true">
+    <div className="visualGlow"></div>
+    <img src="/kunaris-sphere.png" alt="" className="heroSphere"/>
+    <p className="handNote">Ideas<br/>for a brighter<br/>tomorrow</p>
+  </div>
 </section>
-<section id="why" className="why"><p className="eyebrow">WHY KUNARIS</p><h2>Education gives ideas roots.<br/>Creativity gives them wings.</h2><p>We bring learning, technology and creative work together to make ideas useful in the real world.</p></section>
+
+<section id="pathways" className="pathwayGrid">
+  <article id="for-you" className="servicePanel forYouPanel">
+    <div className="panelHeader"><p className="eyebrow">FOR YOU</p><h2>Learn. Explore. Grow.</h2><p>Languages, skills and knowledge for a richer life.</p></div>
+    <div className="menuList">
+      <a href="/for-you" className="menuItem"><span className="iconBox">💬</span><span><strong>Learn a language</strong><small>French · English · Spanish · Cantonese</small></span><Arrow/></a>
+      <a href="/for-you" className="menuItem"><span className="iconBox">▣</span><span><strong>Build practical skills</strong><small>AI & Digital Skills · Personal Development</small></span><Arrow/></a>
+      <a href="/for-you" className="menuItem"><span className="iconBox">◌</span><span><strong>Join a workshop or program</strong><small>Interactive Learning · Educational Projects</small></span><Arrow/></a>
+    </div>
+    <a className="panelCta" href="/for-you">Explore for you <Arrow/></a>
+  </article>
+
+  <article id="for-business" className="servicePanel businessPanel">
+    <div className="panelHeader"><p className="eyebrow">FOR YOUR BUSINESS</p><h2>Create. Build. Be Seen.</h2><p>From ideas to digital products, we help your business grow.</p></div>
+    <div className="menuList compact">
+      <a href="/for-business" className="menuItem"><span className="iconBox">▭</span><span><strong>A new website?</strong><small>Design & development for your business</small></span><Arrow/></a>
+      <a href="/for-business" className="menuItem"><span className="iconBox">▯</span><span><strong>An app or digital tool?</strong><small>Turn your idea into a working product</small></span><Arrow/></a>
+      <a href="/for-business" className="menuItem"><span className="iconBox">⌘</span><span><strong>An educational game?</strong><small>Interactive learning experiences</small></span><Arrow/></a>
+      <a href="/for-business" className="menuItem"><span className="iconBox">▷</span><span><strong>A promotional video?</strong><small>Business · Recruitment · Events · Short videos</small></span><Arrow/></a>
+      <a href="/for-business" className="menuItem"><span className="iconBox">✎</span><span><strong>A logo or brand identity?</strong><small>Visual identity · Graphic design</small></span><Arrow/></a>
+      <a href="/for-business" className="menuItem"><span className="iconBox">▥</span><span><strong>Printing or branded products?</strong><small>Business materials · Merchandise · Custom apparel</small></span><Arrow/></a>
+    </div>
+    <a className="panelCta" href="/for-business">Explore for your business <Arrow/></a>
+  </article>
+</section>
+
+<section id="about" className="statement"><p className="eyebrow">WHY KUNARIS</p><h2>Education gives ideas roots.<br/>Creativity gives them wings.</h2><p>We bring learning, technology and creative work together to make ideas useful in the real world.</p></section>
 <section id="circle" className="circle"><div><p className="eyebrow">COMING NEXT</p><h2>Kunaris Circle</h2></div><p>A future space for learning, exclusive content, member benefits and community.</p><span>Coming soon</span></section>
-<footer><b>KUNARIS</b><p>Education & Media · Learn. Create. Connect.</p><p>© {new Date().getFullYear()} Kunaris Education & Media Inc.</p></footer>
+</div>
+
+<footer><div className="footerLogo"><img src="/kunaris-sphere.png" alt=""/><img src="/kunaris-wordmark.png" alt="Kunaris"/></div><p>Education & Media · Learn. Create. Connect.</p><p>© {new Date().getFullYear()} Kunaris Education & Media Inc.</p></footer>
 </main>}
