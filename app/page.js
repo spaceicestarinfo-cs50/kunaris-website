@@ -110,7 +110,7 @@ export default function Home(){
 <section id="circle" className="circle shell"><div><p className="eyebrow">COMING NEXT</p><h2>Kunaris Circle</h2></div><p>A future space for learning, exclusive content, member benefits and community.</p><span>Coming soon</span></section>
 
 <footer>
- <div className="footerBrand"><img src="/kunaris-sphere.png" alt=""/><span><img src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
+ <div className="footerBrand"><span><img src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
  <div className="footerLinks"><a href="/for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a></div>
  <div className="footerLinks"><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a></div>
  <div className="legal"><b>EN⌄</b><small>Privacy Policy &nbsp;|&nbsp; Terms of Use</small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>

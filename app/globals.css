@@ -484,3 +484,35 @@ footer{padding:35px max(28px,calc((100vw - 1180px)/2));display:grid;grid-templat
   .serviceGrid{grid-template-columns:1fr}
   .headerBrand{min-width:auto}
 }
+
+/* V3.8 locked refinements — no logo/image asset replacement */
+.heroCopy h1 span:nth-child(1){color:#173f38}
+.heroCopy h1 span:nth-child(2){color:#397f78}
+.heroCopy h1 em{color:#86b8ae}
+
+/* Bow direction marker: left of the actual clickable category */
+.serviceHeading{position:relative;padding-left:64px}
+.serviceHeading .bow{position:absolute;left:0;top:50%;transform:translateY(-52%);font-size:0;width:48px}
+.serviceHeading .bow::before{content:"➳";display:block;font:42px/1 Georgia,serif;color:#397f78;transform:scaleX(1.18)}
+
+/* Footer branding: original Kunaris wordmark, enlarged and centered */
+.footerBrand{min-width:340px;display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;gap:4px!important}
+.footerBrand>img[src*="sphere"]{display:none!important}
+.footerBrand div{display:flex!important;flex-direction:column!important;align-items:center!important}
+.footerBrand .footerWordmark,.footerBrand div>img,.footerBrand img:not([src*="sphere"]){
+ width:215px!important;height:auto!important;max-height:62px!important;object-fit:contain!important;margin:0 auto 5px!important
+}
+.footerBrand b{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;font-size:16px!important;font-weight:700}
+.footerBrand small{font-size:12px!important;margin-top:5px}
+
+/* Existing footer EN gets the same language choices on hover/focus */
+.siteFooter .langDrop .langMenu{bottom:34px;top:auto}
+.siteFooter .langDrop:hover .langMenu,.siteFooter .langDrop:focus-within .langMenu,.siteFooter .langDrop.isOpen .langMenu{
+ opacity:1;visibility:visible;pointer-events:auto
+}
+@media(max-width:900px){
+ .serviceHeading{padding-left:54px}
+ .serviceHeading .bow::before{font-size:36px}
+ .footerBrand{min-width:auto}
+ .footerBrand .footerWordmark,.footerBrand div>img,.footerBrand img:not([src*="sphere"]){width:185px!important}
+}
