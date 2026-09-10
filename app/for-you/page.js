@@ -42,7 +42,7 @@ export default function ForYouPage() {
             <p className="chooseHint">Choose a language to explore</p>
             <div className="languageOptions">
               {["French","English","Spanish","Cantonese"].map((x,i)=>
-                <a key={x} href={`mailto:hello@kunaris.ca?subject=${x}%20Language%20Learning%20Inquiry`}>
+                <a key={x} href={x === "French" ? "/for-you/french" : `mailto:hello@kunaris.ca?subject=${x}%20Language%20Learning%20Inquiry`}>
                   <span className="languageIndex">0{i+1}</span><b>{x}</b><span className="smallArrow">→</span>
                 </a>
               )}

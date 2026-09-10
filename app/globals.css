@@ -516,3 +516,32 @@ footer{padding:35px max(28px,calc((100vw - 1180px)/2));display:grid;grid-templat
  .footerBrand{min-width:auto}
  .footerBrand .footerWordmark,.footerBrand div>img,.footerBrand img:not([src*="sphere"]){width:185px!important}
 }
+
+/* V3.9 — locked original-logo treatment + French learning page */
+.headerBrand{gap:15px!important;min-width:390px!important}
+.headerSphere{display:block!important;width:60px!important;height:60px!important;object-fit:contain!important;flex:0 0 auto}
+.wordmarkWrap{align-items:center!important;gap:1px!important}
+.wordmarkWrap img{width:230px!important;height:50px!important;object-fit:contain!important;object-position:center!important}
+.wordmarkWrap small{font-size:15px!important;font-weight:700!important;margin-top:0!important;text-align:center!important;width:100%}
+
+footer .footerBrand{min-width:390px!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:16px!important;text-align:center!important}
+footer .footerBrand>img.footerSphere{display:block!important;width:68px!important;height:68px!important;object-fit:contain!important;flex:0 0 auto}
+footer .footerBrand>span{display:flex!important;flex-direction:column!important;align-items:center!important}
+footer .footerBrand .footerWordmark{width:230px!important;height:50px!important;max-height:none!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important}
+footer .footerBrand b{font-size:15px!important;font-weight:700!important;margin-top:0!important}
+footer .footerBrand small{font-size:11px!important;margin-top:5px!important}
+
+.frenchPage{min-height:100vh;background:#f8fbf7;color:#173f38}
+.frenchHero{padding:66px 0 72px}
+.backLink{display:inline-block;margin-bottom:45px;font-size:13px;font-weight:700;color:#5b7d76}
+.frenchHero h1{font:500 clamp(52px,5.4vw,76px)/.98 Georgia,serif;letter-spacing:-.04em;margin:0}
+.frenchHero>p:last-child{max-width:720px;margin:25px 0 0;font:400 19px/1.6 Georgia,serif;color:#55716b}
+.testBand{background:linear-gradient(105deg,#e9f4ef,#f5f1e6);border-block:1px solid #173f3810}
+.testInner{padding-top:54px;padding-bottom:58px;display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.testIntro h2,.courseIntro h2{font:500 38px/1.08 Georgia,serif;letter-spacing:-.025em;margin:0 0 12px}.testIntro>p:last-child,.courseIntro>p:last-child{margin:0;color:#5b7771;line-height:1.55}
+.testChoices{display:grid;grid-template-columns:1fr 1fr;gap:13px}.testChoices a{min-height:126px;border:1px solid #173f3816;border-radius:20px;background:#ffffffa6;padding:20px;display:grid;grid-template-columns:52px 1fr 24px;gap:13px;align-items:center;transition:.2s ease}.testChoices a:hover{transform:translateY(-3px);box-shadow:0 12px 28px #173f380c;background:#fff}.testChoices>a>span{width:50px;height:50px;border-radius:50%;background:#dcece6;display:flex;align-items:center;justify-content:center;font:600 18px Georgia,serif}.testChoices div{display:flex;flex-direction:column;gap:5px}.testChoices b{font:500 20px Georgia,serif}.testChoices small{font-size:12px;color:#6b837d;line-height:1.4}.testChoices i{font-style:normal;font-size:20px}
+.courseSection{padding-top:76px;padding-bottom:90px}.courseIntro{max-width:680px;margin-bottom:38px}.courseGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.courseCard{min-height:300px;border:1px solid #173f3814;border-radius:22px;padding:27px 29px;background:#f2f7f3;display:flex;flex-direction:column;position:relative;transition:.2s ease}.courseCard:nth-child(2){background:#f7f3e9}.courseCard:nth-child(3){background:#edf5f3}.courseCard:nth-child(4){background:#f5f5ee}.courseCard.featured{border-color:#6c9f9338;box-shadow:inset 0 3px 0 #8db9ad}.courseCard:hover{transform:translateY(-3px);box-shadow:0 12px 30px #173f380a}.courseNo{font-size:11px;letter-spacing:.15em;color:#78938d}.courseTag{margin-top:30px;font-size:10px;font-weight:800;letter-spacing:.16em;color:#5f9186}.courseCard h3{font:500 28px/1.12 Georgia,serif;margin:9px 0 12px;letter-spacing:-.02em}.courseCard p{font-size:14px;line-height:1.6;color:#58736d;max-width:490px;margin:0 0 28px}.courseCard>a{margin-top:auto;font-size:13px;font-weight:800;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #173f3812;padding-top:16px}.courseCard>a b{font-size:19px}
+.frenchFooterBrand{min-width:0!important}
+@media(max-width:1100px){.headerBrand{min-width:320px!important}.headerSphere{width:50px!important;height:50px!important}.wordmarkWrap img{width:190px!important}.wordmarkWrap small{font-size:12px!important}.mainNav{gap:13px!important;font-size:14px!important}}
+@media(max-width:900px){.headerSphere{width:48px!important;height:48px!important}.wordmarkWrap img{width:180px!important}.testInner{grid-template-columns:1fr;gap:30px}.courseGrid{grid-template-columns:1fr}footer .footerBrand{min-width:0!important}}
+@media(max-width:600px){.frenchHero{padding:42px 0 52px}.backLink{margin-bottom:32px}.frenchHero h1{font-size:47px}.testChoices{grid-template-columns:1fr}.courseSection{padding-top:58px;padding-bottom:65px}.courseCard{padding:24px;min-height:280px}footer .footerBrand>img.footerSphere{width:54px!important;height:54px!important}footer .footerBrand .footerWordmark{width:185px!important;height:42px!important}}

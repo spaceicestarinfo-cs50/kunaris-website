@@ -10,7 +10,8 @@ export default function Home(){
  const toggleNav=(name)=>setNavOpen(navOpen===name?"":name);
  return <main>
 <header className="siteHeader">
- <a className="headerBrand" href="#">
+ <a className="headerBrand" href="/">
+  <img className="headerSphere" src="/kunaris-sphere.png" alt="" />
   <span className="wordmarkWrap"><img src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span>
  </a>
  <nav className="mainNav">
@@ -66,11 +67,11 @@ export default function Home(){
    <div className="serviceHeading"><h2>For You</h2><span className="bow">🏹</span></div>
    <p className="serviceDescriptor">LANGUAGES · ACTIVITIES · YOUR JOURNEY</p>
    <div className="items">
-    <Item icon="◇" title="Learn a language" sub="French · English · Spanish · Cantonese"/>
+    <a className="menuItem" href="/for-you"><span className="menuIcon">◇</span><span><strong>Learn a language</strong><small>French · English · Spanish · Cantonese</small></span></a>
     <Item icon="▱" title="Classes & Activities" sub="Workshops · Interest Classes · Interactive Learning"/>
     <Item icon="◎" title="Your Journey in Canada" sub="Study · Work · Build a Life"/>
    </div>
-   <a className="cardCta" href="#">Explore for You</a>
+   <a className="cardCta" href="/for-you">Explore for You</a>
   </div>
  </article>
 
@@ -110,7 +111,7 @@ export default function Home(){
 <section id="circle" className="circle shell"><div><p className="eyebrow">COMING NEXT</p><h2>Kunaris Circle</h2></div><p>A future space for learning, exclusive content, member benefits and community.</p><span>Coming soon</span></section>
 
 <footer>
- <div className="footerBrand"><span><img src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
+ <div className="footerBrand"><img className="footerSphere" src="/kunaris-sphere.png" alt=""/><span><img className="footerWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
  <div className="footerLinks"><a href="/for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a></div>
  <div className="footerLinks"><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a></div>
  <div className="legal"><b>EN⌄</b><small>Privacy Policy &nbsp;|&nbsp; Terms of Use</small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>
