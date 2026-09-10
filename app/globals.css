@@ -343,3 +343,144 @@ footer{padding:35px max(28px,calc((100vw - 1180px)/2));display:grid;grid-templat
   .headerSphere{width:39px;height:39px}
   .wordmarkWrap img{width:150px !important}
 }
+
+/* V3.7 — clearer hierarchy, rounded typography, stable dropdowns */
+.siteHeader{height:96px}
+.headerBrand{min-width:330px}
+.wordmarkWrap{gap:2px}
+.wordmarkWrap img{
+  width:205px !important;
+  height:48px !important;
+}
+.wordmarkWrap small{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+  font-size:15px !important;
+  font-weight:600;
+  letter-spacing:.015em;
+  color:#315b53;
+}
+.mainNav{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+  font-size:17px !important;
+  font-weight:600;
+}
+.navTop{
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+  padding:34px 0;
+}
+.navDrop.isOpen .navMenu,.langDrop.isOpen .langMenu{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translate(-50%,0)!important;
+}
+.langDrop.isOpen .langMenu{transform:translate(0,0)!important}
+.navMenu{top:76px;padding:11px;border-radius:22px}
+.navMenu a{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+  font-size:15px;
+  font-weight:600;
+  padding:14px 15px;
+  border-radius:14px;
+}
+.navMenu a span{display:none!important}
+
+/* Hero keeps the existing clean composition; only typography changes */
+.heroCopy h1{
+  display:flex;
+  align-items:baseline;
+  flex-wrap:nowrap;
+  gap:34px;
+  max-width:none;
+  white-space:nowrap;
+  font-family:"Segoe Print","Bradley Hand","Trebuchet MS",cursive;
+  font-size:clamp(49px,4.4vw,68px);
+  font-weight:600;
+  line-height:1;
+  letter-spacing:-.035em;
+}
+.heroCopy h1 span,.heroCopy h1 em{display:inline-block}
+.heroCopy h1 em{
+  font-family:inherit;
+  font-style:italic;
+  color:#7fb4aa;
+}
+
+/* Service cards: the actual choice is the visual priority */
+.serviceHeading{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin:0 0 7px;
+}
+.serviceHeading h2{
+  margin:0!important;
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif!important;
+  font-size:38px!important;
+  line-height:1.05!important;
+  font-weight:800!important;
+  letter-spacing:-.025em;
+}
+.serviceHeading .bow{
+  font-size:30px;
+  line-height:1;
+  transform:translateY(-1px);
+}
+.serviceDescriptor{
+  margin:0 0 26px;
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:#5c837b;
+}
+.cardContent{
+  max-width:90%!important;
+}
+.menuItem{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+}
+.menuItem strong{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif!important;
+  font-size:16px!important;
+  font-weight:700!important;
+}
+.menuItem small{
+  font-size:13px!important;
+  line-height:1.42!important;
+  margin-top:3px;
+}
+.businessItems{
+  gap:10px!important;
+}
+.businessItems .menuItem{
+  min-height:44px;
+  align-items:flex-start;
+}
+.businessItems .menuIcon{
+  margin-top:2px;
+}
+.cardCta{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+  font-size:13px!important;
+  letter-spacing:.12em;
+}
+
+/* Slightly more room for the busier right panel */
+.serviceGrid{grid-template-columns:.98fr 1.02fr}
+.business .cardContent{padding-right:24px!important}
+@media(max-width:1180px){
+  .wordmarkWrap img{width:185px!important}
+  .wordmarkWrap small{font-size:13px!important}
+  .heroCopy h1{gap:24px;font-size:clamp(45px,4vw,60px)}
+  .serviceHeading h2{font-size:34px!important}
+}
+@media(max-width:900px){
+  .heroCopy h1{white-space:normal;flex-wrap:wrap;gap:12px 22px}
+  .serviceGrid{grid-template-columns:1fr}
+  .headerBrand{min-width:auto}
+}
