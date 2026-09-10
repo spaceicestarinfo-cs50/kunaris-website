@@ -582,3 +582,84 @@ footer .footerBrand .footerWordmark{width:270px!important;height:62px!important}
 footer .footerBrand b{width:300px!important;text-align:center!important}
 @media(max-width:1180px){.headerBrand{min-width:365px!important}.wordmarkWrap,.subBrand>span{width:245px!important}.wordmarkWrap img,.subBrand .subWordmark{width:225px!important}.wordmarkWrap small,.subBrand small{width:245px!important;font-size:12px!important}.headerSphere,.subBrand>img{width:54px!important;height:54px!important}}
 @media(max-width:900px){.pathwayInner,.playBand{grid-template-columns:1fr}.pathwayStats{justify-content:flex-start}.headerBrand{min-width:auto!important}.wordmarkWrap,.subBrand>span{width:210px!important}.wordmarkWrap img,.subBrand .subWordmark{width:195px!important}.wordmarkWrap small,.subBrand small{width:210px!important;font-size:11px!important}}
+
+
+/* V3.11 — final header lock + official sphere overlay */
+.siteHeader{height:104px!important}
+.headerBrand{
+  gap:6px!important;
+  min-width:500px!important;
+  align-items:center!important;
+}
+.headerSphere{
+  width:66px!important;
+  height:66px!important;
+  flex:0 0 66px!important;
+}
+.wordmarkWrap{
+  width:352px!important;
+  align-items:center!important;
+  text-align:center!important;
+}
+.wordmarkWrap img{
+  width:332px!important;
+  height:68px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:0 auto!important;
+}
+.wordmarkWrap small{
+  width:352px!important;
+  font-size:15px!important;
+  font-weight:700!important;
+  line-height:1.1!important;
+  text-align:center!important;
+  margin-top:-5px!important;
+}
+
+/* Replace the decorative sphere shown in the approved Our Story artwork
+   with the original official Kunaris sphere asset, without modifying either source image. */
+.storyFinal{position:relative!important}
+.storyFinal .storyArtwork{display:block!important;width:100%!important}
+.storySphereCover{
+  position:absolute;
+  right:11.9%;
+  bottom:6.0%;
+  width:5.9%;
+  aspect-ratio:1;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f4f8f4;
+  z-index:3;
+}
+.storySphereCover img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  display:block!important;
+}
+
+@media(max-width:1180px){
+  .headerBrand{min-width:420px!important;gap:5px!important}
+  .headerSphere{width:58px!important;height:58px!important;flex-basis:58px!important}
+  .wordmarkWrap{width:305px!important}
+  .wordmarkWrap img{width:288px!important;height:60px!important}
+  .wordmarkWrap small{width:305px!important;font-size:13px!important}
+}
+@media(max-width:900px){
+  .siteHeader{height:90px!important}
+  .headerBrand{min-width:auto!important;gap:4px!important}
+  .headerSphere{width:52px!important;height:52px!important;flex-basis:52px!important}
+  .wordmarkWrap{width:235px!important}
+  .wordmarkWrap img{width:220px!important;height:50px!important}
+  .wordmarkWrap small{width:235px!important;font-size:11px!important;margin-top:-3px!important}
+}
+@media(max-width:520px){
+  .headerSphere{width:44px!important;height:44px!important;flex-basis:44px!important}
+  .wordmarkWrap{width:180px!important}
+  .wordmarkWrap img{width:170px!important;height:42px!important}
+  .wordmarkWrap small{width:180px!important;font-size:9px!important}
+}

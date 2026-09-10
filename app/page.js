@@ -96,9 +96,13 @@ export default function Home(){
 
 <section id="about" className="storyFinal">
   <img
+    className="storyArtwork"
     src="/our-story-final.png"
     alt="Our Story — Education gives us roots. Creativity gives us wings. 以教育扎根，以创意展翅。 From a deeper world to a brighter tomorrow."
   />
+  <span className="storySphereCover" aria-hidden="true">
+    <img src="/kunaris-sphere.png" alt="" />
+  </span>
 </section>
 
 <section className="values shell">
