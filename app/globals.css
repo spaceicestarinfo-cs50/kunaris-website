@@ -208,3 +208,138 @@ footer{padding:35px max(28px,calc((100vw - 1180px)/2));display:grid;grid-templat
   .journeyLinks a b{font-size:23px}
   .journeyLinks a span{font-size:14px}
 }
+
+/* V3.6 — homepage navigation, brand scale and interaction */
+.siteHeader{
+  height:92px;
+  overflow:visible;
+}
+.headerBrand{
+  min-width:355px;
+  gap:13px;
+}
+.headerSphere{
+  width:46px;
+  height:46px;
+}
+.wordmarkWrap img{
+  width:190px !important;
+  height:40px;
+}
+.wordmarkWrap small{
+  font-size:13px !important;
+  margin-top:1px;
+  letter-spacing:.01em;
+}
+.mainNav{
+  gap:23px;
+  font-size:17px !important;
+  overflow:visible;
+}
+.mainNav>a,.navTop{
+  padding:31px 0;
+  position:relative;
+}
+.mainNav>a:not(.signIn)::after,.navTop::after{
+  content:"";
+  position:absolute;
+  left:50%;right:50%;bottom:22px;
+  height:1px;
+  background:#6d9d92;
+  transition:.2s ease;
+}
+.mainNav>a:not(.signIn):hover::after,.navTop:hover::after,.navDrop:hover .navTop::after{
+  left:0;right:0;
+}
+.navDrop,.langDrop{position:relative}
+.navMenu,.langMenu{
+  position:absolute;
+  top:70px;
+  left:50%;
+  transform:translate(-50%,8px);
+  min-width:255px;
+  padding:10px;
+  border:1px solid #5f897d35;
+  border-radius:20px;
+  background:rgba(248,251,247,.98);
+  box-shadow:0 16px 42px #173f3818;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:.2s ease;
+  z-index:100;
+}
+.navDrop:hover .navMenu,.navDrop:focus-within .navMenu,
+.langDrop:hover .langMenu,.langDrop:focus-within .langMenu{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translate(-50%,0);
+}
+.navMenu::before,.langMenu::before{
+  content:"";
+  position:absolute;
+  top:-7px;left:50%;
+  width:13px;height:13px;
+  background:#f8fbf7;
+  border-left:1px solid #5f897d35;
+  border-top:1px solid #5f897d35;
+  transform:translateX(-50%) rotate(45deg);
+}
+.navMenu a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:22px;
+  padding:13px 14px;
+  border-radius:13px;
+  font:500 15px/1.25 Georgia,serif;
+  white-space:nowrap;
+}
+.navMenu a:hover{background:#eaf3ef}
+.navMenu a span{font-size:17px;opacity:.72}
+.businessMenu{min-width:290px}
+.langDrop .lang{font-size:16px;padding:28px 2px;border:0;background:transparent;color:inherit;cursor:pointer}
+.langMenu{min-width:150px;right:0;left:auto;transform:translate(0,8px)}
+.langDrop:hover .langMenu,.langDrop:focus-within .langMenu{transform:translate(0,0)}
+.langMenu::before{left:auto;right:19px;transform:rotate(45deg)}
+.langMenu button{
+  width:100%;border:0;background:transparent;border-radius:11px;
+  padding:10px 11px;display:flex;justify-content:space-between;gap:16px;
+  font-size:14px;color:#173f38;cursor:pointer;
+}
+.langMenu button:hover,.langMenu .current{background:#eaf3ef}
+.langMenu small{font-size:11px;color:#6b837d}
+.signIn{font-size:16px;padding:11px 19px !important}
+
+/* Make the two homepage service panels read as selectable areas */
+.serviceCard{
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.serviceCard:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 36px #173f3812;
+  border-color:#5f897d45;
+}
+.serviceCard .menuItem{cursor:pointer}
+.serviceCard .menuItem > span:last-child{
+  display:none !important;
+}
+.serviceCard .cardLink{
+  font-size:14px;
+}
+.serviceCard .cardLink::after{
+  content:"  🏹";
+  font-size:18px;
+  margin-left:8px;
+}
+@media(max-width:1180px){
+  .headerBrand{min-width:300px}
+  .wordmarkWrap img{width:165px !important}
+  .wordmarkWrap small{font-size:11.5px !important}
+  .mainNav{gap:15px;font-size:15.5px !important}
+}
+@media(max-width:900px){
+  .siteHeader{height:78px}
+  .headerBrand{min-width:auto}
+  .headerSphere{width:39px;height:39px}
+  .wordmarkWrap img{width:150px !important}
+}

@@ -8,11 +8,38 @@ export default function Home(){return <main>
   <img className="headerSphere" src="/kunaris-sphere.png" alt=""/>
   <span className="wordmarkWrap"><img src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span>
  </a>
- <nav>
-  <a href="/for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a>
-  <a href="#circle">Kunaris Circle</a><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a>
-  <a className="signIn" href="#circle">Sign In <Arrow/></a><button className="lang">EN⌄</button>
- </nav>
+ <nav className="mainNav">
+          <div className="navDrop">
+            <a className="navTop" href="/for-you">For You</a>
+            <div className="navMenu">
+              <a href="/for-you">Learn a Language <span>🏹</span></a>
+              <a href="/for-you">Classes &amp; Activities <span>🏹</span></a>
+              <a href="/for-you">Your Journey in Canada <span>🏹</span></a>
+            </div>
+          </div>
+          <div className="navDrop">
+            <a className="navTop" href="#for-business">For Your Business</a>
+            <div className="navMenu businessMenu">
+              <a href="#for-business">Website &amp; Digital <span>🏹</span></a>
+              <a href="#for-business">Video &amp; Media <span>🏹</span></a>
+              <a href="#for-business">Brand &amp; Visual <span>🏹</span></a>
+              <a href="#for-business">Printing &amp; Branded Products <span>🏹</span></a>
+            </div>
+          </div>
+          <a href="#projects">Projects</a>
+          <a href="#circle">Kunaris Circle</a>
+          <a href="#about">About</a>
+          <a href="mailto:hello@kunaris.ca">Contact</a>
+          <a className="signIn" href="#circle">Sign In →</a>
+          <div className="langDrop">
+            <button className="lang">EN⌄</button>
+            <div className="langMenu">
+              <button className="current">EN <small>English</small></button>
+              <button>FR <small>Français</small></button>
+              <button>中文 <small>Chinese</small></button>
+            </div>
+          </div>
+        </nav>
 </header>
 
 <div className="shell">
@@ -31,11 +58,11 @@ export default function Home(){return <main>
  <article id="for-you" className="serviceCard forYou">
   <div className="cardWash washLearning"></div>
   <div className="cardContent">
-   <p className="eyebrow">FOR YOU</p><h2>Learn. Explore. Grow.</h2><p className="intro">Languages, skills and knowledge for a richer life.</p>
+   <p className="eyebrow">FOR YOU</p><h2>Learn. Explore. Grow.</h2><p className="intro">Languages, activities and resources for a richer life.</p>
    <div className="items">
     <Item icon="◇" title="Learn a language" sub="French · English · Spanish · Cantonese"/>
-    <Item icon="▱" title="Build practical skills" sub="AI & Digital Skills · Personal Development"/>
-    <Item icon="◎" title="Join a workshop or program" sub="Interactive Learning · Educational Projects"/>
+    <Item icon="▱" title="Classes & Activities" sub="Workshops · Interest Classes · Interactive Learning"/>
+    <Item icon="◎" title="Your Journey in Canada" sub="Study · Work · Build a Life"/>
    </div>
    <a className="cardCta" href="#">Explore for You <Arrow/></a>
   </div>
