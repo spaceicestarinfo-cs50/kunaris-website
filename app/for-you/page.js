@@ -1,11 +1,13 @@
-export const metadata = {
-  title: "For You | Kunaris Education & Media Inc.",
-  description: "Languages, classes, activities and practical resources for your journey in Canada."
-};
+"use client";
 
-const Arrow = () => <span aria-hidden="true">↗</span>;
+import { useState } from "react";
+
+const Arrow = ({open=false}) => <span className={"menuArrow " + (open ? "open" : "")} aria-hidden="true">➜</span>;
 
 export default function ForYouPage() {
+  const [open, setOpen] = useState("language");
+  const toggle = (name) => setOpen(open === name ? "" : name);
+
   return (
     <main className="forYouPage">
       <header className="subHeader">
@@ -16,7 +18,7 @@ export default function ForYouPage() {
         <nav>
           <a className="active" href="/for-you">For You</a><a href="/#for-business">For Your Business</a>
           <a href="/#projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a>
-          <a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In <Arrow /></a>
+          <a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a>
           <button className="lang">EN⌄</button>
         </nav>
       </header>
@@ -27,52 +29,75 @@ export default function ForYouPage() {
         <p className="fyLead">Learning can open a door, spark a new interest, or help you build a life somewhere new. Start with what matters to you.</p>
       </section>
 
-      <section className="fyChoices fyShell">
+      <section className="choiceMenu fyShell">
         <p className="eyebrow">WHAT WOULD YOU LIKE TO EXPLORE?</p>
-        <div className="fyGrid">
-          <article className="fyCard">
-            <div><span className="fyNumber">01</span><h2>Learn a Language</h2>
-              <p>Learn for study, work, travel or everyday life — at a pace that works for you.</p>
-              <div className="fyTags"><span>French</span><span>English</span><span>Spanish</span><span>Cantonese</span></div>
-            </div>
-            <a href="mailto:hello@kunaris.ca?subject=Language%20Learning%20Inquiry">Explore language learning <Arrow /></a>
-          </article>
 
-          <article className="fyCard activitiesCard">
-            <div><span className="fyNumber">02</span><h2>Classes &amp; Activities</h2>
-              <p>Discover workshops, interest classes and interactive learning experiences beyond the classroom.</p>
-              <div className="fyTags"><span>Workshops</span><span>Interest Classes</span><span>Interactive Learning</span></div>
+        <article className={"accordion languageAccordion "+(open==="language"?"expanded":"")}>
+          <button className="accordionHead" onClick={()=>toggle("language")} aria-expanded={open==="language"}>
+            <span className="choiceNo">01</span>
+            <span className="choiceText"><b>Learn a Language</b><small>Practical language skills for study, work, travel and everyday life.</small></span>
+            <Arrow open={open==="language"}/>
+          </button>
+          {open==="language" && <div className="accordionBody">
+            <p className="chooseHint">Choose a language to explore</p>
+            <div className="languageOptions">
+              {["French","English","Spanish","Cantonese"].map((x,i)=>
+                <a key={x} href={`mailto:hello@kunaris.ca?subject=${x}%20Language%20Learning%20Inquiry`}>
+                  <span className="languageIndex">0{i+1}</span><b>{x}</b><span className="smallArrow">→</span>
+                </a>
+              )}
             </div>
-            <a href="mailto:hello@kunaris.ca?subject=Classes%20and%20Activities%20Inquiry">Discover activities <Arrow /></a>
-          </article>
+          </div>}
+        </article>
 
-          <article className="fyCard journeyCard">
-            <div><span className="fyNumber">03</span><h2>Your Journey in Canada</h2>
-              <p>Start with clear, practical information and trusted official resources for different stages of life in Canada.</p>
-              <div className="journeySteps">
-                <span><b>Study</b><small>Learn &amp; prepare</small></span><i>→</i>
-                <span><b>Work</b><small>Build experience</small></span><i>→</i>
-                <span><b>Build a Life</b><small>Plan your future</small></span>
-              </div>
+        <article className={"accordion activityAccordion "+(open==="activities"?"expanded":"")}>
+          <button className="accordionHead" onClick={()=>toggle("activities")} aria-expanded={open==="activities"}>
+            <span className="choiceNo">02</span>
+            <span className="choiceText"><b>Classes &amp; Activities</b><small>Workshops, interest classes and interactive learning experiences.</small></span>
+            <Arrow open={open==="activities"}/>
+          </button>
+          {open==="activities" && <div className="accordionBody">
+            <p className="chooseHint">Choose what you would like to explore</p>
+            <div className="languageOptions threeOptions">
+              {["Workshops","Interest Classes","Interactive Learning"].map((x,i)=>
+                <a key={x} href={`mailto:hello@kunaris.ca?subject=${encodeURIComponent(x)}%20Inquiry`}>
+                  <span className="languageIndex">0{i+1}</span><b>{x}</b><span className="smallArrow">→</span>
+                </a>
+              )}
             </div>
-            <a href="#journey">Explore your journey <Arrow /></a>
-          </article>
-        </div>
+          </div>}
+        </article>
+
+        <article className={"accordion journeyAccordion "+(open==="journey"?"expanded":"")}>
+          <button className="accordionHead" onClick={()=>toggle("journey")} aria-expanded={open==="journey"}>
+            <span className="choiceNo">03</span>
+            <span className="choiceText"><b>Your Journey in Canada</b><small>Clear information and trusted official resources for different stages of life in Canada.</small></span>
+            <Arrow open={open==="journey"}/>
+          </button>
+          {open==="journey" && <div className="accordionBody journeyQuick">
+            <a href="#journey"><b>Study</b><small>Learn &amp; prepare</small><span>→</span></a>
+            <a href="#journey"><b>Work</b><small>Build experience</small><span>→</span></a>
+            <a href="#journey"><b>Build a Life</b><small>Plan your future</small><span>→</span></a>
+          </div>}
+        </article>
       </section>
 
-      <section id="journey" className="journeyInfo fyShell">
-        <div className="journeyIntro"><p className="eyebrow">YOUR JOURNEY IN CANADA</p>
-          <h2>Start with reliable information.</h2>
-          <p>We make official information easier to find and understand, so you can explore your options before deciding what kind of support you may need.</p>
-        </div>
-        <div className="journeyLinks">
-          <div><b>Study</b><span>Education, learning and official resources</span></div>
-          <div><b>Work</b><span>Working in Canada and practical information</span></div>
-          <div><b>Build a Life</b><span>Resources for planning your longer-term future</span></div>
-        </div>
-        <div className="guidanceBox"><div><h3>Need personalized guidance?</h3>
-          <p>Every journey is different. If you need advice based on your individual situation, you can submit a consultation request.</p></div>
-          <a href="mailto:hello@kunaris.ca?subject=Consultation%20Request">Request a Consultation <Arrow /></a>
+      <section id="journey" className="journeyBackdrop">
+        <div className="journeyWash" aria-hidden="true"></div>
+        <div className="journeyInfo fyShell">
+          <div className="journeyIntro"><p className="eyebrow">YOUR JOURNEY IN CANADA</p>
+            <h2>Start with reliable information.</h2>
+            <p>We make official information easier to find and understand, so you can explore your options before deciding what kind of support you may need.</p>
+          </div>
+          <div className="journeyLinks">
+            <a href="#"><b>Study</b><span>Education, learning and official resources</span><i>→</i></a>
+            <a href="#"><b>Work</b><span>Working in Canada and practical information</span><i>→</i></a>
+            <a href="#"><b>Build a Life</b><span>Resources for planning your longer-term future</span><i>→</i></a>
+          </div>
+          <div className="guidanceBox"><div><h3>Need personalized guidance?</h3>
+            <p>Every journey is different. If you need advice based on your individual situation, you can submit a consultation request.</p></div>
+            <a href="mailto:hello@kunaris.ca?subject=Consultation%20Request">Request a Consultation ↗</a>
+          </div>
         </div>
       </section>
 
