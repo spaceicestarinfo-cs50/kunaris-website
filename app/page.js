@@ -9,7 +9,7 @@ export default function Home(){return <main>
   <span className="wordmarkWrap"><img src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span>
  </a>
  <nav>
-  <a href="#for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a>
+  <a href="/for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a>
   <a href="#circle">Kunaris Circle</a><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a>
   <a className="signIn" href="#circle">Sign In <Arrow/></a><button className="lang">EN⌄</button>
  </nav>
@@ -77,7 +77,7 @@ export default function Home(){return <main>
 
 <footer>
  <div className="footerBrand"><img src="/kunaris-sphere.png" alt=""/><span><img src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
- <div className="footerLinks"><a href="#for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a></div>
+ <div className="footerLinks"><a href="/for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a></div>
  <div className="footerLinks"><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a></div>
  <div className="legal"><b>EN⌄</b><small>Privacy Policy &nbsp;|&nbsp; Terms of Use</small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>
 </footer>
