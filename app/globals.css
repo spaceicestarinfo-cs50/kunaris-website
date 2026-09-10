@@ -124,3 +124,87 @@ footer{padding:35px max(28px,calc((100vw - 1180px)/2));display:grid;grid-templat
 .journeyBackdrop{position:relative;overflow:hidden;border-top:1px solid #173f3810;background:#f8fbf7}.journeyWash{position:absolute;inset:0;background-image:linear-gradient(rgba(248,251,247,.74),rgba(248,251,247,.82)),url('/our-story-final.png');background-size:cover;background-position:center;opacity:.36;filter:saturate(.75)}.journeyBackdrop .journeyInfo{position:relative;z-index:1;border-top:0}.journeyLinks a{position:relative;background:#f8fbf7d9;padding:25px;display:flex;flex-direction:column;gap:8px}.journeyLinks a i{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-style:normal;font-size:19px}.journeyLinks a:hover{background:#fff}.guidanceBox{background:#eaf3efdc;backdrop-filter:blur(5px)}
 @media(max-width:800px){.accordionHead{grid-template-columns:42px 1fr 44px;padding:20px;min-height:112px}.choiceText b{font-size:25px}.choiceText small{font-size:13px}.menuArrow{width:40px;height:40px}.languageOptions,.threeOptions,.journeyQuick{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.languageOptions,.threeOptions,.journeyQuick{grid-template-columns:1fr}.accordionBody{margin:0 12px 12px;padding:14px}.choiceNo{display:none}.accordionHead{grid-template-columns:1fr 42px}.journeyWash{background-size:auto 100%;}}
+
+/* V3.5 — Journey readability + complete Kun artwork */
+.journeyBackdrop{
+  min-height:600px;
+  display:flex;
+  align-items:center;
+}
+.journeyWash{
+  background-image:
+    linear-gradient(rgba(248,251,247,.58),rgba(248,251,247,.64)),
+    url('/our-story-final.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  opacity:.58;
+  filter:saturate(.9) contrast(1.02);
+}
+.journeyBackdrop .journeyInfo{
+  padding-top:82px;
+  padding-bottom:82px;
+}
+.journeyIntro{
+  grid-template-columns:.9fr 1.1fr;
+  column-gap:72px;
+}
+.journeyIntro h2{
+  font-size:44px;
+  line-height:1.06;
+}
+.journeyIntro>p:last-child{
+  font-size:18px;
+  line-height:1.6;
+}
+.journeyLinks{
+  margin-top:48px;
+  border-radius:18px;
+}
+.journeyLinks a{
+  min-height:112px;
+  justify-content:center;
+  padding:26px 56px 26px 28px;
+  background:rgba(248,251,247,.88);
+  backdrop-filter:blur(4px);
+}
+.journeyLinks a b{
+  font-size:25px;
+}
+.journeyLinks a span{
+  font-size:15px;
+  line-height:1.45;
+}
+.journeyLinks a i{
+  font-size:24px;
+  right:25px;
+}
+.guidanceBox{
+  padding:32px 34px;
+  min-height:128px;
+}
+.guidanceBox h3{
+  font-size:27px;
+}
+.guidanceBox p{
+  font-size:16px;
+}
+.guidanceBox>a{
+  font-size:15px;
+  padding:14px 20px;
+}
+@media(max-width:900px){
+  .journeyBackdrop{min-height:auto}
+  .journeyWash{
+    background-size:cover;
+    opacity:.42;
+  }
+  .journeyBackdrop .journeyInfo{
+    padding-top:60px;
+    padding-bottom:60px;
+  }
+  .journeyIntro h2{font-size:37px}
+  .journeyIntro>p:last-child{font-size:16px}
+  .journeyLinks a b{font-size:23px}
+  .journeyLinks a span{font-size:14px}
+}
