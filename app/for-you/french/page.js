@@ -9,7 +9,8 @@ const COURSE_OPTIONS = [
   "TEF / TCF Exam Preparation",
   "Full-Time Online French",
   "In-Person Group French",
-  "French to B1 Pathway",
+  "From Scratch to B1 — Intensive French Pathway",
+  "From Scratch to B2 — Intensive French Pathway",
   "Not sure yet"
 ];
 
@@ -69,8 +70,8 @@ export default function FrenchPage(){
   <section className="testBand">
    <div className="fyShell testInner"><div className="testIntro"><p className="eyebrow">NOT SURE WHERE TO START?</p><h2>Check your French level first.</h2><p>Try a short level test, or ask us to help you choose the right starting point.</p><button className="textCta" onClick={()=>openForm("Free Assessment","Not sure yet")}>Request a free assessment →</button></div>
     <div className="testChoices">
-     <a href="https://frenchtest.educationicestar.ca/A1" target="_blank" rel="noreferrer"><span>A1</span><div><b>A1 Level Test</b><small>Start here if you are a beginner.</small></div><i>↗</i></a>
-     <a href="https://frenchtest.educationicestar.ca/A2" target="_blank" rel="noreferrer"><span>A2</span><div><b>A2 Level Test</b><small>Check your elementary French level.</small></div><i>↗</i></a>
+     <a className="testCard a1Test" href="https://frenchtest.educationicestar.ca/A1" target="_blank" rel="noreferrer"><span>A1</span><div><em>QUICK &amp; FREE</em><b>A1 Level Test</b><small>Start here if you are a beginner.</small></div><i>→</i></a>
+     <a className="testCard a2Test" href="https://frenchtest.educationicestar.ca/A2" target="_blank" rel="noreferrer"><span>A2</span><div><em>QUICK &amp; FREE</em><b>A2 Level Test</b><small>Check your elementary French level.</small></div><i>→</i></a>
     </div>
    </div>
   </section>
@@ -85,7 +86,13 @@ export default function FrenchPage(){
    </div>
   </section>
 
-  <section className="pathwayBand"><div className="fyShell pathwayInner"><div><p className="eyebrow">STRUCTURED PATHWAY</p><h2>French to B1 Pathway</h2><p>A complete learning path combining foundation French, focused skills training and additional online practice to help you build toward a solid B1 level.</p></div><div className="pathwayStats"><span><b>238</b><small>hours of core learning<br/>including 1-on-1 training</small></span><i>+</i><span><b>150</b><small>hours of additional<br/>online group learning</small></span></div><button className="pathwayButton" onClick={()=>openForm("Course Inquiry","French to B1 Pathway")}>Ask about the B1 Pathway →</button></div></section>
+  <section className="pathwayBand"><div className="fyShell pathwayWrap">
+   <div className="pathwayHeading"><p className="eyebrow">INTENSIVE FRENCH PATHWAYS</p><h2>Start from scratch. Build French fast.</h2><p>High-intensity programs combining weekday group classes, 4-person small-group learning and personalized 1-on-1 support.</p></div>
+   <div className="pathwayGrid">
+    <article className="intensivePath b1Path"><small className="pathBadge">24 WEEKS · B1 PATHWAY</small><h3>From Scratch to B1</h3><h4>Intensive French Pathway</h4><p className="pathLead">Start from zero. Build fast. Reach B1 with confidence.</p><div className="pathComponents"><span><b>Intensive Group Class</b><small>Mon–Thu 9:00 AM–2:00 PM<br/>Fri 9:00 AM–12:00 PM<br/>24 weeks</small></span><i>+</i><span><b>4-Person Small Group Core</b><small>Focused learning, interaction and feedback</small></span><i>+</i><span><b>1-on-1 Training</b><small>Personalized support for targeted progress</small></span></div><div className="pathActions"><button onClick={()=>openForm("Course Inquiry","From Scratch to B1 — Intensive French Pathway")}>Ask About This Program →</button><button onClick={()=>openForm("Free Assessment","From Scratch to B1 — Intensive French Pathway")}>Free Assessment →</button><button onClick={()=>openForm("Check Current Schedules","From Scratch to B1 — Intensive French Pathway")}>Check Schedules →</button></div></article>
+    <article className="intensivePath b2Path"><small className="pathBadge">32 WEEKS · B2 PATHWAY</small><h3>From Scratch to B2</h3><h4>Intensive French Pathway</h4><p className="pathLead">Go further with 8 additional weeks of intensive learning and build toward B2.</p><div className="pathComponents"><span><b>Intensive Group Class</b><small>Mon–Thu 9:00 AM–2:00 PM<br/>Fri 9:00 AM–12:00 PM<br/>32 weeks</small></span><i>+</i><span><b>4-Person Small Group Core</b><small>Structured practice from beginner through advanced skills</small></span><i>+</i><span><b>1-on-1 Training</b><small>Personalized support for your goals</small></span></div><div className="pathActions"><button onClick={()=>openForm("Course Inquiry","From Scratch to B2 — Intensive French Pathway")}>Ask About This Program →</button><button onClick={()=>openForm("Free Assessment","From Scratch to B2 — Intensive French Pathway")}>Free Assessment →</button><button onClick={()=>openForm("Check Current Schedules","From Scratch to B2 — Intensive French Pathway")}>Check Schedules →</button></div></article>
+   </div>
+  </div></section>
 
   <section className="playBand fyShell"><div><p className="eyebrow">LEARN BY PLAYING</p><h2>Practice French through real-life adventures.</h2><p>Explore interactive travel scenarios and put useful French into practice. Our French learning game is also part of Kunaris&apos; digital learning projects.</p></div><a href="/#projects">Explore the learning project →</a></section>
 
