@@ -545,3 +545,40 @@ footer .footerBrand small{font-size:11px!important;margin-top:5px!important}
 @media(max-width:1100px){.headerBrand{min-width:320px!important}.headerSphere{width:50px!important;height:50px!important}.wordmarkWrap img{width:190px!important}.wordmarkWrap small{font-size:12px!important}.mainNav{gap:13px!important;font-size:14px!important}}
 @media(max-width:900px){.headerSphere{width:48px!important;height:48px!important}.wordmarkWrap img{width:180px!important}.testInner{grid-template-columns:1fr;gap:30px}.courseGrid{grid-template-columns:1fr}footer .footerBrand{min-width:0!important}}
 @media(max-width:600px){.frenchHero{padding:42px 0 52px}.backLink{margin-bottom:32px}.frenchHero h1{font-size:47px}.testChoices{grid-template-columns:1fr}.courseSection{padding-top:58px;padding-bottom:65px}.courseCard{padding:24px;min-height:280px}footer .footerBrand>img.footerSphere{width:54px!important;height:54px!important}footer .footerBrand .footerWordmark{width:185px!important;height:42px!important}}
+
+/* V3.10 — locked header proportions + rounded French course system */
+.headerBrand{gap:18px!important;min-width:455px!important;align-items:center!important}
+.headerSphere{width:62px!important;height:62px!important}
+.wordmarkWrap{width:300px!important;display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.wordmarkWrap img{width:270px!important;height:62px!important;max-width:none!important;object-fit:contain!important;margin:0 auto!important}
+.wordmarkWrap small{width:300px!important;font-size:15px!important;line-height:1.15!important;text-align:center!important;margin-top:-2px!important}
+.subBrand{gap:18px!important;align-items:center!important}
+.subBrand>img{width:62px!important;height:62px!important;object-fit:contain!important}
+.subBrand>span{width:300px!important;display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.subBrand .subWordmark{width:270px!important;height:62px!important;max-width:none!important;object-fit:contain!important;margin:0 auto!important}
+.subBrand small{width:300px!important;text-align:center!important;font-size:15px!important;font-weight:700!important}
+
+.frenchPage,.frenchPage button,.frenchPage a,.frenchPage p,.frenchPage small{font-family:"Trebuchet MS","Arial Rounded MT Bold","Segoe UI",Arial,sans-serif}
+.frenchHero h1,.testIntro h2,.courseIntro h2,.courseCard h3,.pathwayInner h2,.playBand h2{font-family:"Trebuchet MS","Arial Rounded MT Bold","Segoe UI",Arial,sans-serif!important;font-weight:700!important;letter-spacing:-.035em}
+.frenchHero>p:last-child{font-family:"Trebuchet MS","Arial Rounded MT Bold","Segoe UI",Arial,sans-serif!important}
+.courseCard{min-height:390px}
+.courseCard p{margin-bottom:17px}
+.courseFacts{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
+.courseFacts span{font-size:11px;line-height:1.25;padding:7px 10px;border:1px solid #507a711f;border-radius:999px;background:#ffffff8c;color:#486b64}
+.pathwayBand{background:linear-gradient(105deg,#eaf4ef,#f7f2e8);border-block:1px solid #173f3810}
+.pathwayInner{padding-top:62px;padding-bottom:62px;display:grid;grid-template-columns:1.2fr .95fr;gap:52px;align-items:center}
+.pathwayInner h2,.playBand h2{font-size:38px;line-height:1.08;margin:0 0 13px}
+.pathwayInner p{max-width:650px;color:#58736d;line-height:1.6;margin:0}
+.pathwayStats{display:flex;align-items:center;justify-content:center;gap:20px}
+.pathwayStats span{display:flex;flex-direction:column;align-items:center;text-align:center}
+.pathwayStats b{font-size:44px;line-height:1;color:#397f78}
+.pathwayStats small{margin-top:7px;font-size:11px;line-height:1.35;color:#58736d}
+.pathwayStats i{font-style:normal;font-size:28px;color:#86a79f}
+.pathwayInner>a{grid-column:1/-1;justify-self:start;font-size:13px;font-weight:800;border-bottom:1px solid #173f38;padding-bottom:4px}
+.playBand{padding-top:70px;padding-bottom:75px;display:grid;grid-template-columns:1fr auto;gap:50px;align-items:end}
+.playBand>div{max-width:720px}.playBand p:last-child{color:#58736d;line-height:1.6}.playBand>a{font-size:13px;font-weight:800;border:1px solid #507a712d;border-radius:999px;padding:13px 18px;background:#fff}
+footer .footerBrand>span{width:300px!important}
+footer .footerBrand .footerWordmark{width:270px!important;height:62px!important}
+footer .footerBrand b{width:300px!important;text-align:center!important}
+@media(max-width:1180px){.headerBrand{min-width:365px!important}.wordmarkWrap,.subBrand>span{width:245px!important}.wordmarkWrap img,.subBrand .subWordmark{width:225px!important}.wordmarkWrap small,.subBrand small{width:245px!important;font-size:12px!important}.headerSphere,.subBrand>img{width:54px!important;height:54px!important}}
+@media(max-width:900px){.pathwayInner,.playBand{grid-template-columns:1fr}.pathwayStats{justify-content:flex-start}.headerBrand{min-width:auto!important}.wordmarkWrap,.subBrand>span{width:210px!important}.wordmarkWrap img,.subBrand .subWordmark{width:195px!important}.wordmarkWrap small,.subBrand small{width:210px!important;font-size:11px!important}}
