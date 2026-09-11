@@ -26,10 +26,10 @@ export default function Home(){
   <div className={"navDrop "+(navOpen==="business"?"isOpen":"")}>
     <button className="navTop" onClick={()=>toggleNav("business")}>For Your Business</button>
     <div className="navMenu businessMenu">
-      <a href="#for-business">Website &amp; Digital</a>
-      <a href="#for-business">Video &amp; Media</a>
-      <a href="#for-business">Brand &amp; Visual</a>
-      <a href="#for-business">Printing &amp; Branded Products</a>
+      <a href="/for-business#brand-digital">Brand &amp; Digital</a>
+      <a href="/for-business#video-media">Video &amp; Media</a>
+      <a href="/for-business#print-promotion">Printing &amp; Branded Products</a>
+      <a href="/for-business#training">Training for Your Team</a>
     </div>
   </div>
   <a href="#projects">Projects</a>
@@ -81,14 +81,12 @@ export default function Home(){
    <div className="serviceHeading"><h2>For Your Business</h2><span className="bow">🏹</span></div>
    <p className="serviceDescriptor">DIGITAL SOLUTIONS · CREATIVE MEDIA · BUSINESS GROWTH</p>
    <div className="items businessItems">
-    <Item icon="▭" title="A new website?" sub="Design & development for your business"/>
-    <Item icon="▯" title="An app or digital tool?" sub="Turn your idea into a working product"/>
-    <Item icon="⌘" title="An educational game?" sub="Interactive learning experiences"/>
-    <Item icon="▷" title="A promotional video?" sub="Business · Recruitment · Events · Short videos"/>
-    <Item icon="✎" title="A logo or brand identity?" sub="Visual identity · Graphic design"/>
-    <Item icon="▥" title="Printing or branded products?" sub="Business materials · Merchandise · Custom apparel"/>
+    <a className="menuItem" href="/for-business#brand-digital"><span className="menuIcon">◇</span><span><strong>Brand &amp; Digital</strong><small>Logo · Website · App · Digital Tools · Educational Games</small></span></a>
+    <a className="menuItem" href="/for-business#video-media"><span className="menuIcon">▷</span><span><strong>Video &amp; Media</strong><small>Promotional Video · Social Content · Local &amp; Destination Stories</small></span></a>
+    <a className="menuItem" href="/for-business#print-promotion"><span className="menuIcon">▥</span><span><strong>Printing &amp; Branded Products</strong><small>Apparel · Workwear · Event Materials · Custom Printing</small></span></a>
+    <a className="menuItem" href="/for-business#training"><span className="menuIcon">◎</span><span><strong>Training for Your Team</strong><small>Language · Digital Skills · AI Skills · Customized Training</small></span></a>
    </div>
-   <a className="cardCta" href="#">Explore for Your Business</a>
+   <a className="cardCta" href="/for-business">Explore for Your Business</a>
   </div>
  </article>
 </section>
@@ -116,7 +114,7 @@ export default function Home(){
 
 <footer>
  <div className="footerBrand"><img className="footerSphere" src="/kunaris-sphere.png" alt=""/><span><img className="footerWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
- <div className="footerLinks"><a href="/for-you">For You</a><a href="#for-business">For Your Business</a><a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a></div>
+ <div className="footerLinks"><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="#projects">Projects</a><a href="#circle">Kunaris Circle</a></div>
  <div className="footerLinks"><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a></div>
  <div className="legal"><b>EN⌄</b><small>Privacy Policy &nbsp;|&nbsp; Terms of Use</small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>
 </footer>
