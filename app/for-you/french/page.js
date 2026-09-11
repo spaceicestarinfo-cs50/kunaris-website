@@ -1,4 +1,5 @@
 "use client";
+import SiteHeader from "../../components/SiteHeader";
 
 import { useState } from "react";
 
@@ -56,10 +57,7 @@ export default function FrenchPage(){
  };
 
  return <main className="frenchPage">
-  <header className="subHeader frenchHeader">
-   <a className="subBrand" href="/"><img src="/kunaris-sphere.png" alt=""/><span><img className="subWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span></a>
-   <nav><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/projects">Projects</a><a href="/circle">Kunaris Circle</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/circle">Kunaris Circle</a><button className="lang">EN⌄</button></nav>
-  </header>
+  <SiteHeader active="you"/>
 
   <section className="frenchHero fyShell">
    <a className="backLink" href="/for-you">← Learn a Language</a>

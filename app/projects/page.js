@@ -1,12 +1,7 @@
+import SiteHeader from "../components/SiteHeader";
 export default function ProjectsPage(){
   return <main className="projectsPage">
-    <header className="subHeader">
-      <a className="subBrand" href="/">
-        <img src="/kunaris-sphere.png" alt="" />
-        <span><img className="subWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span>
-      </a>
-      <nav><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a className="active" href="/projects">Projects &amp; Community</a><a href="/circle">Kunaris Circle</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/circle">Kunaris Circle</a><button className="lang">EN⌄</button></nav>
-    </header>
+    <SiteHeader active="projects"/>
 
     <section className="projectsHero fyShell">
       <a className="backLink" href="/">← Back to Kunaris</a>
@@ -59,7 +54,7 @@ export default function ProjectsPage(){
       </div>
     </section>
 
-    <section className="projectsClosing fyShell"><div><p className="eyebrow">CREATE WITH KUNARIS</p><h2>Have an idea, a place or a story worth bringing to life?</h2><p>We are open to business, education, community and creative collaborations.</p></div><a href="mailto:hello@kunaris.ca?subject=Project%20or%20Collaboration%20Inquiry">Start a Conversation →</a></section>
+    <section className="projectsClosing fyShell"><div><p className="eyebrow">CREATE WITH KUNARIS</p><h2>Have an idea, a place or a story worth bringing to life?</h2><p>We are open to business, education, community and creative collaborations.</p></div><a href="/contact">Start a Conversation →</a></section>
 
     <footer className="subFooter"><div className="footerInner fyShell"><a href="/">← Kunaris Home</a><span>Projects &amp; Community</span><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div></footer>
   </main>

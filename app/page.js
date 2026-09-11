@@ -1,52 +1,13 @@
 "use client";
-import { useState } from "react";
+import SiteHeader from "./components/SiteHeader";
 
 
 const Arrow=()=> <span aria-hidden="true">→</span>;
-const Item=({icon,title,sub})=><a className="menuItem" href="#"><span className="menuIcon">{icon}</span><span><strong>{title}</strong><small>{sub}</small></span><Arrow/></a>;
+const Item=({icon,title,sub,href})=><a className="menuItem" href={href}><span className="menuIcon">{icon}</span><span><strong>{title}</strong><small>{sub}</small></span><Arrow/></a>;
 
 export default function Home(){
- const [navOpen,setNavOpen]=useState("");
- const toggleNav=(name)=>setNavOpen(navOpen===name?"":name);
  return <main>
-<header className="siteHeader">
- <a className="headerBrand" href="/">
-  <img className="headerSphere" src="/kunaris-sphere.png" alt="" />
-  <span className="wordmarkWrap"><img src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span>
- </a>
- <nav className="mainNav">
-  <div className={"navDrop "+(navOpen==="you"?"isOpen":"")}>
-    <button className="navTop" onClick={()=>toggleNav("you")}>For You</button>
-    <div className="navMenu">
-      <a href="/for-you">Learn a Language</a>
-      <a href="/for-you">Classes &amp; Activities</a>
-      <a href="/for-you">Your Journey in Canada</a>
-    </div>
-  </div>
-  <div className={"navDrop "+(navOpen==="business"?"isOpen":"")}>
-    <button className="navTop" onClick={()=>toggleNav("business")}>For Your Business</button>
-    <div className="navMenu businessMenu">
-      <a href="/for-business#brand-digital">Brand &amp; Digital</a>
-      <a href="/for-business#video-media">Video &amp; Media</a>
-      <a href="/for-business#print-promotion">Printing &amp; Branded Products</a>
-      <a href="/for-business#training">Training for Your Team</a>
-    </div>
-  </div>
-  <a href="/projects">Projects &amp; Community</a>
-  <a href="/circle">Kunaris Circle</a>
-  <a href="/about">About</a>
-  <a href="/contact">Contact</a>
-  <a href="/circle">Kunaris Circle</a>
-  <div className={"langDrop "+(navOpen==="lang"?"isOpen":"")}>
-    <button className="lang" onClick={()=>toggleNav("lang")}>EN⌄</button>
-    <div className="langMenu">
-      <button className="current">EN <small>English</small></button>
-      <button>FR <small>Français</small></button>
-      <button>中文 <small>Chinese</small></button>
-    </div>
-  </div>
-</nav>
-</header>
+<SiteHeader />
 
 <div className="shell">
 <section className="hero">
@@ -68,8 +29,8 @@ export default function Home(){
    <p className="serviceDescriptor">LANGUAGES · ACTIVITIES · YOUR JOURNEY</p>
    <div className="items">
     <a className="menuItem" href="/for-you"><span className="menuIcon">◇</span><span><strong>Learn a language</strong><small>French · English · Spanish · Cantonese</small></span></a>
-    <Item icon="▱" title="Classes & Activities" sub="Workshops · Interest Classes · Interactive Learning"/>
-    <Item icon="◎" title="Your Journey in Canada" sub="Study · Work · Build a Life"/>
+    <Item icon="▱" title="Classes & Activities" sub="Workshops · Interest Classes · Interactive Learning" href="/for-you/classes-activities"/>
+    <Item icon="◎" title="Your Journey in Canada" sub="Study · Work · Build a Life" href="/for-you/journey"/>
    </div>
    <a className="cardCta" href="/for-you">Explore for You</a>
   </div>

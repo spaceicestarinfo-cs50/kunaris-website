@@ -1,4 +1,5 @@
 "use client";
+import SiteHeader from "../components/SiteHeader";
 
 import { useState } from "react";
 
@@ -10,18 +11,7 @@ export default function ForYouPage() {
 
   return (
     <main className="forYouPage">
-      <header className="subHeader">
-        <a className="subBrand" href="/">
-          <img src="/kunaris-sphere.png" alt="" />
-          <span><img className="subWordmark" src="/kunaris-wordmark.png" alt="Kunaris" /><small>Kunaris Education &amp; Media Inc.</small></span>
-        </a>
-        <nav>
-          <a className="active" href="/for-you">For You</a><a href="/for-business">For Your Business</a>
-          <a href="/projects">Projects</a><a href="/circle">Kunaris Circle</a><a href="/about">About</a>
-          <a href="/contact">Contact</a><a href="/circle">Kunaris Circle</a>
-          <button className="lang">EN⌄</button>
-        </nav>
-      </header>
+      <SiteHeader active="you"/>
 
       <section className="fyHero fyShell">
         <p className="eyebrow">FOR YOU</p>
@@ -29,7 +19,7 @@ export default function ForYouPage() {
         <p className="fyLead">Learning can open a door, spark a new interest, or help you build a life somewhere new. Start with what matters to you.</p>
       </section>
 
-      <section className="choiceMenu fyShell">
+      <section id="languages" className="choiceMenu fyShell">
         <p className="eyebrow">WHAT WOULD YOU LIKE TO EXPLORE?</p>
 
         <article className={"accordion languageAccordion "+(open==="language"?"expanded":"")}>
@@ -96,7 +86,7 @@ export default function ForYouPage() {
           </div>
           <div className="guidanceBox"><div><h3>Need personalized guidance?</h3>
             <p>Every journey is different. If you need advice based on your individual situation, you can submit a consultation request.</p></div>
-            <a href="mailto:hello@kunaris.ca?subject=Consultation%20Request">Request a Consultation ↗</a>
+            <a href="/contact">Request a Consultation ↗</a>
           </div>
         </div>
       </section>
