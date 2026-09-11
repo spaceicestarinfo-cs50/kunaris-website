@@ -75,9 +75,9 @@ export default function ForYouPage() {
             <Arrow open={open==="journey"}/>
           </button>
           {open==="journey" && <div className="accordionBody journeyQuick">
-            <a href="#journey"><b>Study</b><small>Learn &amp; prepare</small><span>→</span></a>
-            <a href="#journey"><b>Work</b><small>Build experience</small><span>→</span></a>
-            <a href="#journey"><b>Build a Life</b><small>Plan your future</small><span>→</span></a>
+            <a href="/for-you/journey#study"><b>Study</b><small>Learn &amp; prepare</small><span>→</span></a>
+            <a href="/for-you/journey#work"><b>Work</b><small>Build experience</small><span>→</span></a>
+            <a href="/for-you/journey#live"><b>Build a Life</b><small>Plan your future</small><span>→</span></a>
           </div>}
         </article>
       </section>
@@ -90,9 +90,9 @@ export default function ForYouPage() {
             <p>We make official information easier to find and understand, so you can explore your options before deciding what kind of support you may need.</p>
           </div>
           <div className="journeyLinks">
-            <a href="#"><b>Study</b><span>Education, learning and official resources</span><i>→</i></a>
-            <a href="#"><b>Work</b><span>Working in Canada and practical information</span><i>→</i></a>
-            <a href="#"><b>Build a Life</b><span>Resources for planning your longer-term future</span><i>→</i></a>
+            <a href="/for-you/journey#study"><b>Study</b><span>New Brunswick education and official resources</span><i>→</i></a>
+            <a href="/for-you/journey#work"><b>Work</b><span>New Brunswick jobs and workplace resources</span><i>→</i></a>
+            <a href="/for-you/journey#live"><b>Build a Life</b><span>Communities, settlement and everyday resources</span><i>→</i></a>
           </div>
           <div className="guidanceBox"><div><h3>Need personalized guidance?</h3>
             <p>Every journey is different. If you need advice based on your individual situation, you can submit a consultation request.</p></div>
