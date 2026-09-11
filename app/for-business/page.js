@@ -78,7 +78,7 @@ export default function ForBusinessPage(){
  return <main className="businessPage">
   <header className="subHeader businessSubHeader">
    <a className="subBrand" href="/"><img src="/kunaris-sphere.png" alt=""/><span><img className="subWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span></a>
-   <nav><a href="/for-you">For You</a><a className="active" href="/for-business">For Your Business</a><a href="/projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a><button className="lang">EN⌄</button></nav>
+   <nav><a href="/for-you">For You</a><a className="active" href="/for-business">For Your Business</a><a href="/projects">Projects</a><a href="/circle">Kunaris Circle</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/circle">Kunaris Circle</a><button className="lang">EN⌄</button></nav>
   </header>
 
   <section className="bizHero fyShell">

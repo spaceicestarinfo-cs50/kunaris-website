@@ -33,10 +33,10 @@ export default function Home(){
     </div>
   </div>
   <a href="/projects">Projects &amp; Community</a>
-  <a href="#circle">Kunaris Circle</a>
-  <a href="#about">About</a>
-  <a href="mailto:hello@kunaris.ca">Contact</a>
-  <a className="signIn" href="#circle">Sign In →</a>
+  <a href="/circle">Kunaris Circle</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+  <a href="/circle">Kunaris Circle</a>
   <div className={"langDrop "+(navOpen==="lang"?"isOpen":"")}>
     <button className="lang" onClick={()=>toggleNav("lang")}>EN⌄</button>
     <div className="langMenu">
@@ -114,8 +114,8 @@ export default function Home(){
 
 <footer>
  <div className="footerBrand"><img className="footerSphere" src="/kunaris-sphere.png" alt=""/><span><img className="footerWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
- <div className="footerLinks"><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/projects">Projects &amp; Community</a><a href="#circle">Kunaris Circle</a></div>
- <div className="footerLinks"><a href="#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a></div>
+ <div className="footerLinks"><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/projects">Projects &amp; Community</a><a href="/circle">Kunaris Circle</a></div>
+ <div className="footerLinks"><a href="/about">About</a><a href="/contact">Contact</a></div>
  <div className="legal"><b>EN⌄</b><small>Privacy Policy &nbsp;|&nbsp; Terms of Use</small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>
 </footer>
 </main>}

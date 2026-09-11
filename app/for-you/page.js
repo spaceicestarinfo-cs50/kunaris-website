@@ -17,8 +17,8 @@ export default function ForYouPage() {
         </a>
         <nav>
           <a className="active" href="/for-you">For You</a><a href="/for-business">For Your Business</a>
-          <a href="/projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a>
-          <a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a>
+          <a href="/projects">Projects</a><a href="/circle">Kunaris Circle</a><a href="/about">About</a>
+          <a href="/contact">Contact</a><a href="/circle">Kunaris Circle</a>
           <button className="lang">EN⌄</button>
         </nav>
       </header>
