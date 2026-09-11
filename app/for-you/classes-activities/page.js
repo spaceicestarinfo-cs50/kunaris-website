@@ -2,7 +2,7 @@ export default function ClassesActivitiesPage(){
  return <main className="activitiesPage">
   <header className="subHeader activitiesHeader">
    <a className="subBrand" href="/"><img src="/kunaris-sphere.png" alt=""/><span><img className="subWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span></a>
-   <nav><a className="active" href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/#projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a><button className="lang">EN⌄</button></nav>
+   <nav><a className="active" href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a><button className="lang">EN⌄</button></nav>
   </header>
 
   <section className="activitiesHero fyShell">

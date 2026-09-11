@@ -58,7 +58,7 @@ export default function FrenchPage(){
  return <main className="frenchPage">
   <header className="subHeader frenchHeader">
    <a className="subBrand" href="/"><img src="/kunaris-sphere.png" alt=""/><span><img className="subWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span></a>
-   <nav><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/#projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a><button className="lang">EN⌄</button></nav>
+   <nav><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/projects">Projects</a><a href="/#circle">Kunaris Circle</a><a href="/#about">About</a><a href="mailto:hello@kunaris.ca">Contact</a><a className="signIn" href="/#circle">Sign In ↗</a><button className="lang">EN⌄</button></nav>
   </header>
 
   <section className="frenchHero fyShell">
@@ -96,7 +96,7 @@ export default function FrenchPage(){
 
   <section className="conversationStrip fyShell"><div><p className="eyebrow">PRACTICE TOGETHER</p><h2>French Conversation Club</h2><p>Practice speaking in a relaxed setting through online or in-person sessions available throughout the year.</p></div><a href="/for-you/classes-activities#conversation-club">Explore conversation sessions →</a></section>
 
-  <section className="playBand fyShell"><div><p className="eyebrow">LEARN BY PLAYING</p><h2>Practice French through real-life adventures.</h2><p>Explore interactive travel scenarios and put useful French into practice. Our French learning game is also part of Kunaris&apos; digital learning projects.</p></div><a href="/#projects">Explore the learning project →</a></section>
+  <section id="learning-game" className="playBand fyShell"><div><p className="eyebrow">LEARN BY PLAYING</p><h2>Practice French through real-life adventures.</h2><p>Explore interactive travel scenarios and put useful French into practice. Our French learning game is also part of Kunaris&apos; digital learning projects.</p></div><a href="/projects">Explore the learning project →</a></section>
 
   <footer className="fyFooter"><div className="fyShell footerInner"><div className="footerBrand frenchFooterBrand"><img className="footerSphere" src="/kunaris-sphere.png" alt=""/><span><img className="footerWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div><a href="/">Back to Home ↑</a></div></footer>
 
