@@ -2,7 +2,7 @@
 import SiteHeader from "./components/SiteHeader";
 
 
-const Arrow=()=> <span aria-hidden="true">→</span>;
+const Arrow=()=> <span className="menuArrow" aria-hidden="true">→</span>;
 const Item=({icon,title,sub,href})=><a className="menuItem" href={href}><span className="menuIcon">{icon}</span><span><strong>{title}</strong><small>{sub}</small></span><Arrow/></a>;
 
 export default function Home(){

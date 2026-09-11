@@ -13,7 +13,8 @@ const services = [
       ["Educational Game Development","Interactive learning · Gamified experiences · Learning tools"],
     ],
     cta:"Start a Brand & Digital Project",
-    subject:"Brand & Digital Project Inquiry"
+    subject:"Brand & Digital Project Inquiry",
+    image:"/biz-brand.png"
   },
   {
     id:"video-media",
@@ -28,7 +29,8 @@ const services = [
       ["Tourism & Destination Content","Places · Experiences · Community stories"],
     ],
     cta:"Talk About a Media Project",
-    subject:"Video & Media Project Inquiry"
+    subject:"Video & Media Project Inquiry",
+    image:"/biz-video.png"
   },
   {
     id:"print-promotion",
@@ -43,7 +45,8 @@ const services = [
       ["Custom Printing Services","Small-batch and custom project inquiries"],
     ],
     cta:"Ask About Branded Products",
-    subject:"Printing & Branded Products Inquiry"
+    subject:"Printing & Branded Products Inquiry",
+    image:"/biz-printing.png"
   },
   {
     id:"training",
@@ -58,7 +61,8 @@ const services = [
       ["Customized Team Training","Programs tailored to your organization"],
     ],
     cta:"Discuss Team Training",
-    subject:"Team Training Inquiry"
+    subject:"Team Training Inquiry",
+    image:"/biz-training.png"
   },
 ];
 
@@ -87,7 +91,11 @@ export default function ForBusinessPage(){
   </section>
 
   <section className="bizOverview fyShell" aria-label="Business services">
-   {services.map(s=><a key={s.id} href={`#${s.id}`}><span>{s.no}</span><b>{s.label.replace("BRAND & DIGITAL","Brand & Digital").replace("VIDEO & MEDIA","Video & Media").replace("PRINTING & BRANDED PRODUCTS","Printing & Branded Products").replace("TRAINING FOR YOUR TEAM","Training for Your Team")}</b><small>{s.items.map(x=>x[0]).join(" · ")}</small><i>↓</i></a>)}
+   {services.map(s=><a key={s.id} href={`#${s.id}`} className="bizTreasureCard">
+     <span className="bizTreasureNo">{s.no}</span>
+     <img className="bizTreasureImage" src={s.image} alt="" />
+     <div className="bizTreasureLabel"><b>{s.label.replace("BRAND & DIGITAL","Brand & Digital").replace("VIDEO & MEDIA","Video & Media").replace("PRINTING & BRANDED PRODUCTS","Printing & Branded Products").replace("TRAINING FOR YOUR TEAM","Training for Your Team")}</b><i>→</i></div>
+   </a>)}
   </section>
 
   <section className="bizServices fyShell">
