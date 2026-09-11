@@ -1,60 +1,66 @@
 import SiteHeader from "../components/SiteHeader";
+
+function BrowserMock({kind}){
+  if(kind === "game") return <div className="projectMock gameMock" aria-hidden="true">
+    <div className="mockTop"><i></i><i></i><i></i><span>French Travel Adventure</span></div>
+    <div className="gameScene"><small>TRAVEL FRENCH</small><b>Where will your French take you?</b><div className="sceneChoices"><span>Airport</span><span>Café</span><span>Hotel</span></div><em>★ ★ ★</em></div>
+  </div>;
+  return <div className="projectMock testMock" aria-hidden="true">
+    <div className="mockTop"><i></i><i></i><i></i><span>French Level Test</span></div>
+    <div className="testScene"><small>QUICK LEVEL CHECK</small><b>Find your starting point.</b><div className="testLine"><span></span><span></span><span></span></div><div className="levelBtns"><span>A1</span><span>A2</span></div></div>
+  </div>;
+}
+
 export default function ProjectsPage(){
-  return <main className="projectsPage">
+  return <main className="projectsPage projectsEditorial">
     <SiteHeader active="projects"/>
 
     <section className="projectsHero fyShell">
       <a className="backLink" href="/">← Back to Kunaris</a>
       <p className="eyebrow">PROJECTS &amp; COMMUNITY</p>
       <h1>Ideas in action.<br/>Stories worth sharing.</h1>
-      <p className="projectsLead">We build learning experiences, tell local stories and create projects that connect people, places and communities.</p>
-      <div className="projectsHeroLinks"><a href="#learning">Learning &amp; Digital</a><a href="#stories">Stories &amp; Places</a><a href="#community">Community &amp; Collaboration</a></div>
+      <p className="projectsLead">A growing collection of learning experiences, local stories and community projects created by Kunaris.</p>
+      <nav className="editorialNav" aria-label="Project sections"><a href="#learning">Learning &amp; Digital</a><span>·</span><a href="#stories">Stories &amp; Places</a><span>·</span><a href="#community">Community</a></nav>
     </section>
 
-    <section id="learning" className="projectSection fyShell">
-      <div className="projectSectionHead"><span>01</span><div><p className="eyebrow">LEARNING &amp; DIGITAL PROJECTS</p><h2>Learning can be useful, interactive and fun.</h2><p>Kunaris combines education and digital tools to turn learning ideas into practical experiences people can actually use.</p></div></div>
-      <div className="projectFeatureGrid">
-        <article className="projectFeature projectTest">
-          <small>KUNARIS LEARNING PROJECT</small>
-          <h3>French Level Test</h3>
-          <p>Short online A1 and A2 level checks designed to help learners understand where to begin before choosing a French learning path.</p>
-          <div className="projectPills"><span>Online tool</span><span>French learning</span><span>Quick &amp; free</span></div>
-          <div className="projectActions"><a href="https://frenchtest.educationicestar.ca/A1" target="_blank" rel="noreferrer">Try A1 Test ↗</a><a href="https://frenchtest.educationicestar.ca/A2" target="_blank" rel="noreferrer">Try A2 Test ↗</a></div>
-        </article>
-        <article className="projectFeature projectGame">
-          <small>KUNARIS DIGITAL LEARNING PROJECT</small>
-          <h3>French Travel Adventure</h3>
-          <p>Practice useful French through travel situations, challenges and rewards — a learning experience designed around real-life communication.</p>
-          <div className="projectPills"><span>Interactive learning</span><span>Real-life scenarios</span><span>Gamified experience</span></div>
-          <div className="projectActions"><a href="/for-you/french#learning-game">Explore the Project →</a></div>
-        </article>
-      </div>
-      <div className="projectBridge"><div><p className="eyebrow">HAVE A LEARNING IDEA?</p><h3>We can help turn it into a digital experience.</h3><p>Educational games, assessment tools, interactive forms and custom learning products can be developed around your audience and goals.</p></div><a href="/for-business#brand-digital">Explore Brand &amp; Digital →</a></div>
+    <section id="learning" className="editorialSection fyShell">
+      <header className="editorialSectionTitle"><span>01</span><div><p className="eyebrow">LEARNING &amp; DIGITAL</p><h2>Digital learning, made practical.</h2><p>Experiments and tools that turn learning ideas into experiences people can actually use.</p></div></header>
+
+      <article className="editorialFeature">
+        <div className="featureVisual"><BrowserMock kind="game"/></div>
+        <div className="featureCopy"><p className="featureNo">FEATURE 01 · DIGITAL LEARNING</p><h3>French Travel Adventure</h3><p>Practice useful French through travel situations, challenges and rewards — designed around real-life communication rather than memorization alone.</p><div className="featureMeta"><span>Interactive Learning</span><span>French</span><span>Gamified Experience</span></div><a href="/for-you/french#learning-game">View Project →</a></div>
+      </article>
+
+      <article className="editorialFeature reverse">
+        <div className="featureVisual"><BrowserMock kind="test"/></div>
+        <div className="featureCopy"><p className="featureNo">FEATURE 02 · ONLINE TOOL</p><h3>French Level Test</h3><p>Short A1 and A2 level checks that help learners understand where to begin before choosing a French learning path.</p><div className="featureMeta"><span>Assessment Tool</span><span>French Learning</span><span>Quick &amp; Free</span></div><div className="textActions"><a href="https://frenchtest.educationicestar.ca/A1" target="_blank" rel="noreferrer">Try A1 ↗</a><a href="https://frenchtest.educationicestar.ca/A2" target="_blank" rel="noreferrer">Try A2 ↗</a></div></div>
+      </article>
+
+      <div className="editorialBridge"><span>Have a learning idea?</span><p>We also create educational games, assessment tools and custom digital learning experiences.</p><a href="/for-business#brand-digital">Explore what we can build →</a></div>
     </section>
 
-    <section id="stories" className="storiesBand">
+    <section id="stories" className="editorialStories">
       <div className="fyShell">
-        <div className="projectSectionHead"><span>02</span><div><p className="eyebrow">STORIES &amp; PLACES</p><h2>Discover local places. Meet the people behind them.</h2><p>We are starting with restaurants, cafés and everyday discoveries — creating short-form stories around food, people, places and experiences.</p></div></div>
-        <div className="storyProjectGrid">
-          <article><small>KUNARIS ORIGINAL · STARTING SOON</small><h3>Restaurant &amp; Café Stories</h3><p>Food, atmosphere and the people behind local businesses — told through approachable short-form video and creative content.</p><span>Food · People · Places · Stories</span></article>
-          <article><small>KUNARIS ORIGINAL</small><h3>Local Finds</h3><p>Interesting shops, neighbourhood discoveries and experiences worth sharing with the people around us.</p><span>Explore · Discover · Share</span></article>
-          <article><small>KUNARIS ORIGINAL</small><h3>Places &amp; Experiences</h3><p>Day trips, activities, city experiences and places we genuinely enjoy discovering along the way.</p><span>Go somewhere · Try something</span></article>
-          <article className="nbStoryCard"><small>NEW BRUNSWICK · GROWING SERIES</small><h3>Discover New Brunswick</h3><p>Local businesses, communities, destinations and experiences across New Brunswick — a space that will grow as Kunaris builds deeper roots in the province.</p><a href="/for-you/journey">Explore the NB Resource Hub →</a></article>
+        <header className="editorialSectionTitle"><span>02</span><div><p className="eyebrow">STORIES &amp; PLACES</p><h2>Places worth discovering. Stories worth telling.</h2><p>Food, people, neighbourhoods and destinations — seen through a curious local lens.</p></div></header>
+        <div className="storyMagazine">
+          <article className="storyLead"><div className="storyArt restaurantArt"><span>COMING SOON</span></div><div><small>KUNARIS ORIGINAL</small><h3>Restaurant &amp; Café Stories</h3><p>Food, atmosphere and the people behind local businesses, told through approachable short-form stories.</p><b>Food · People · Places</b></div></article>
+          <article><div className="storyArt localArt"></div><small>KUNARIS ORIGINAL</small><h3>Local Finds</h3><p>Shops, neighbourhood discoveries and everyday experiences worth sharing.</p><b>Explore · Discover · Share</b></article>
+          <article><div className="storyArt nbArt"></div><small>NEW BRUNSWICK · GROWING SERIES</small><h3>Discover New Brunswick</h3><p>Communities, destinations and experiences as Kunaris builds deeper roots in the province.</p><a href="/for-you/journey">Explore New Brunswick →</a></article>
         </div>
-        <div className="clientProjectNote"><span>CLIENT PROJECT</span><p>As commissioned business projects are completed, they will be clearly identified separately from Kunaris Original content.</p><a href="/for-business#video-media">Need a story for your business? →</a></div>
+        <div className="editorialNote"><b>Kunaris Original</b><p>Our own editorial and exploration content is shown separately from commissioned client work. Client projects will be clearly identified as they are added.</p></div>
       </div>
     </section>
 
-    <section id="community" className="projectSection fyShell communityProjects">
-      <div className="projectSectionHead"><span>03</span><div><p className="eyebrow">COMMUNITY &amp; COLLABORATION</p><h2>Learning and creativity work better when people connect.</h2><p>From conversation sessions to future community, education and regional collaborations, we want Kunaris projects to create useful connections.</p></div></div>
-      <div className="communityProjectGrid">
-        <a href="/for-you/classes-activities#conversation-club"><small>LANGUAGE &amp; COMMUNITY</small><h3>French Conversation Club</h3><p>Online and in-person opportunities to practise French in a relaxed, social setting.</p><b>Explore the Conversation Club →</b></a>
-        <article><small>COMMUNITY PROJECTS</small><h3>Activities &amp; Local Collaboration</h3><p>Workshops, community activities and creative collaborations can grow here as new projects take shape.</p><b>More projects coming soon</b></article>
-        <article><small>NEW BRUNSWICK</small><h3>Future Partnerships</h3><p>We are building toward education, community, local business and destination projects that can contribute to New Brunswick.</p><b>Growing with the community</b></article>
+    <section id="community" className="editorialSection fyShell communityEditorial">
+      <header className="editorialSectionTitle"><span>03</span><div><p className="eyebrow">COMMUNITY</p><h2>Better when people connect.</h2><p>Learning, activities and collaborations that create useful connections around us.</p></div></header>
+      <div className="communityLines">
+        <a href="/for-you/classes-activities#conversation-club"><span>01</span><div><small>LANGUAGE &amp; COMMUNITY</small><h3>French Conversation Club</h3><p>Online and in-person opportunities to practise French in a relaxed, social setting.</p></div><b>Explore →</b></a>
+        <div><span>02</span><div><small>COMMUNITY PROJECTS</small><h3>Activities &amp; Local Collaboration</h3><p>Workshops, activities and creative collaborations as new projects take shape.</p></div><b>Growing</b></div>
+        <div><span>03</span><div><small>NEW BRUNSWICK</small><h3>Future Partnerships</h3><p>Education, community, local business and destination projects we hope to grow into.</p></div><b>Looking ahead</b></div>
       </div>
     </section>
 
-    <section className="projectsClosing fyShell"><div><p className="eyebrow">CREATE WITH KUNARIS</p><h2>Have an idea, a place or a story worth bringing to life?</h2><p>We are open to business, education, community and creative collaborations.</p></div><a href="/contact">Start a Conversation →</a></section>
+    <section className="editorialClosing"><div className="fyShell"><p className="eyebrow">WORK WITH KUNARIS</p><h2>Like what you see?</h2><p>Let’s create something useful, memorable or worth sharing.</p><div><a href="/for-business">Explore Business Services →</a><a href="/contact">Start a Conversation →</a></div></div></section>
 
     <footer className="subFooter"><div className="footerInner fyShell"><a href="/">← Kunaris Home</a><span>Projects &amp; Community</span><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div></footer>
   </main>
