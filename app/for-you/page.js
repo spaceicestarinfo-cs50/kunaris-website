@@ -60,7 +60,7 @@ export default function ForYouPage() {
             <p className="chooseHint">Choose what you would like to explore</p>
             <div className="languageOptions threeOptions">
               {["Workshops","Interest Classes","Interactive Learning"].map((x,i)=>
-                <a key={x} href={`mailto:hello@kunaris.ca?subject=${encodeURIComponent(x)}%20Inquiry`}>
+                <a key={x} href="/for-you/classes-activities">
                   <span className="languageIndex">0{i+1}</span><b>{x}</b><span className="smallArrow">→</span>
                 </a>
               )}
