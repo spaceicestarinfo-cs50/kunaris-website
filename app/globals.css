@@ -853,3 +853,168 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
 @media (max-width:900px){.bizStoryBackdrop{background-size:auto 100%!important}}
 /* Chinese typography: keep readable hierarchy without changing the approved visual system */
 [lang="zh"] body,.zhPage{font-family:Arial,"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif}
+
+/* V3.25 — Chinese localization: readable, literary, and distinct from the English layout.
+   Preferred Noto CJK families are SIL OFL; we do not load a remote font service here. */
+.zhPage{
+  --zh-serif:"Noto Serif CJK SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;
+  --zh-sans:"Noto Sans CJK SC","Source Han Sans SC","PingFang SC","Microsoft YaHei","Heiti SC",sans-serif;
+  --zh-kai:"KaiTi","STKaiti","Kaiti SC","Noto Serif CJK SC",serif;
+  font-family:var(--zh-sans);
+}
+.zhPage h1,.zhPage h2,.zhPage h3,.zhPage .cardContent h2,.zhPage .menuItem strong,.zhPage .choiceText b,.zhPage .languageOptions b,.zhPage .journeyQuick b,.zhPage .journeyIntro h2,.zhPage .journeyLinks b,.zhPage .guidanceBox h3{
+  font-family:var(--zh-serif);
+}
+.zhPage .eyebrow{font-family:var(--zh-sans);letter-spacing:.1em;font-weight:760}
+.zhPage .backLink{font-size:15px}
+
+/* Homepage Chinese hero */
+.zhHero .heroCopy{max-width:680px}
+.zhHero .zhMotto{font-size:15px;letter-spacing:.13em;margin-bottom:20px;color:#4f7f76}
+.zhHeroTitle{font-family:var(--zh-kai)!important;font-weight:500!important;letter-spacing:.035em!important;line-height:1.14!important;display:flex;align-items:baseline;flex-wrap:wrap;gap:.08em .34em;font-size:clamp(42px,4.6vw,66px)!important}
+.zhHeroTitle span,.zhHeroTitle em{font-family:inherit;font-style:normal;font-weight:500}
+.zhHeroTitle span:nth-child(2){color:#397f78}.zhHeroTitle em{color:#78aa9f!important}
+.zhHero .heroCopy h2{font-family:var(--zh-serif);font-size:22px;line-height:1.5;letter-spacing:.01em;margin-top:24px}
+.zhHero .heroCopy>p:last-of-type{font-size:17px;line-height:1.72}
+.zhPage .serviceCard .cardContent h2{font-size:31px;line-height:1.2;font-weight:650}
+.zhPage .menuItem strong{font-size:17px;line-height:1.35;font-weight:650}
+.zhPage .menuItem small{font-size:13.5px;line-height:1.45;margin-top:4px}
+.zhPage .serviceDescriptor{font-size:13px;letter-spacing:.08em}
+
+/* Homepage collaboration ribbon */
+.homeCollab{width:100%;border-block:1px solid #173f3810;background:linear-gradient(110deg,#eef6f2 0%,#faf6ed 100%);position:relative;overflow:hidden}
+.homeCollab:before,.homeCollab:after{content:"";position:absolute;top:0;bottom:0;width:42px;opacity:.3;background:linear-gradient(90deg,transparent,#d8c99d66,transparent)}
+.homeCollab:before{left:3%}.homeCollab:after{right:3%}
+.homeCollabInner{padding:42px 0;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:center}
+.homeCollab h2{font-family:var(--zh-serif);font-size:34px;line-height:1.25;margin:5px 0 12px;letter-spacing:.025em}
+.homeCollab p:not(.eyebrow){font-size:16px;line-height:1.75;color:#58736d;max-width:760px;margin:0 0 16px}
+.homeCollab a{font-size:14px;font-weight:800;color:#245f57}
+.homeCollab aside{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;color:#355f57;text-align:center}
+.homeCollab aside span{font-family:var(--zh-serif);font-size:21px}
+.homeCollab aside i{font-style:normal;color:#9b7d4d}
+.homeCollab aside small{flex-basis:100%;font-size:10px;letter-spacing:.16em;color:#78938d;margin-top:8px}
+
+/* Projects: Chinese editorial hierarchy */
+.zhPage .projectsEditorial .projectsHero{padding-top:66px;padding-bottom:60px}
+.zhPage .projectsEditorial .projectsHero h1.zhEditorialHero{font-family:var(--zh-serif);font-size:clamp(42px,4.5vw,62px);line-height:1.16;letter-spacing:.025em;font-weight:650;margin:14px 0 20px;max-width:760px}
+.zhPage .projectsEditorial .projectsLead{font-size:17px;line-height:1.75;max-width:780px}
+.zhPage .editorialNav{font-size:15px;text-transform:none;letter-spacing:.035em;margin-top:25px;gap:14px}
+.zhPage .editorialSection{padding-top:58px;padding-bottom:68px}
+.zhPage .editorialSectionTitle{grid-template-columns:58px 1fr;gap:18px;margin-bottom:38px}
+.zhPage .editorialSectionTitle>span{font-size:18px;letter-spacing:.05em;color:#6f9189;padding-top:4px;font-weight:650}
+.zhPage .editorialSectionTitle .eyebrow{font-size:15px;margin-bottom:7px}
+.zhPage .editorialSectionTitle h2{font-family:var(--zh-serif);font-size:clamp(31px,3vw,42px);line-height:1.25;letter-spacing:.015em;font-weight:650;margin:0 0 10px}
+.zhPage .editorialSectionTitle div>p:last-child{font-size:16px;line-height:1.72}
+.zhPage .editorialFeature{margin-left:76px;gap:50px;padding:18px 0 54px}
+.zhPage .featureNo{font-size:14px!important;letter-spacing:.08em!important;margin-bottom:14px!important}
+.zhPage .featureCopy h3{font-family:var(--zh-serif);font-size:clamp(32px,3.3vw,44px);line-height:1.18;letter-spacing:.01em;font-weight:650}
+.zhPage .featureCopy>p{font-size:16px;line-height:1.75}
+.zhPage .featureMeta span{font-size:13px;padding-bottom:5px}
+.zhPage .featureCopy>a,.zhPage .textActions a{font-size:15px}
+.zhPage .mockTop span{font-size:12px}
+.zhPage .gameScene small,.zhPage .testScene small{font-size:12px;letter-spacing:.08em}
+.zhPage .gameScene b,.zhPage .testScene b{font-family:var(--zh-serif);font-size:clamp(22px,2.25vw,31px);line-height:1.35}
+.zhPage .editorialBridge{margin-left:76px;padding:22px 0;grid-template-columns:220px 1fr auto;gap:24px}
+.zhPage .editorialBridge span{font-family:var(--zh-serif);font-size:19px;font-weight:650}
+.zhPage .editorialBridge p{font-size:15px;line-height:1.65}
+.zhPage .editorialBridge a{font-size:14px}
+.zhPage .editorialStories{padding:62px 0 70px}
+.zhPage .storyMagazine{margin-left:76px}
+.zhPage .storyMagazine small{font-size:12px;letter-spacing:.08em}
+.zhPage .storyMagazine h3{font-family:var(--zh-serif);font-size:28px;line-height:1.3;font-weight:650}
+.zhPage .storyLead h3{font-size:34px}
+.zhPage .storyMagazine p{font-size:15px;line-height:1.72}
+.zhPage .storyMagazine b,.zhPage .storyMagazine a{font-size:14px}
+.zhPage .editorialNote{margin-left:76px}
+.zhPage .editorialNote b{font-size:14px;text-transform:none;letter-spacing:.03em}
+.zhPage .editorialNote p{font-size:14px;line-height:1.72}
+.zhPage .communityLines{margin-left:76px}
+.zhPage .communityLines>a,.zhPage .communityLines>div{grid-template-columns:54px 1fr auto;gap:20px;padding:23px 4px}
+.zhPage .communityLines>*>span{font-size:18px;color:#71928b;font-weight:650}
+.zhPage .communityLines small{font-size:13px;letter-spacing:.07em}
+.zhPage .communityLines h3{font-family:var(--zh-serif);font-size:28px;line-height:1.25;margin:4px 0 7px;font-weight:650}
+.zhPage .communityLines p{font-size:15px;line-height:1.65}
+.zhPage .communityLines b{font-size:14px}
+
+/* Collaboration feature: invitation, not a free-service promise */
+.collabFeature{background:linear-gradient(110deg,#e8f2ee,#faf5eb);border-block:1px solid #173f3810;padding:62px 0 34px}
+.collabFeatureInner{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center}
+.collabFeature h2{font-family:var(--zh-serif);font-size:clamp(34px,3.8vw,50px);line-height:1.2;letter-spacing:.02em;margin:8px 0 15px;font-weight:650}
+.collabFeature p:not(.eyebrow){font-size:16px;line-height:1.8;color:#546f68;max-width:780px}
+.collabFeature a{display:inline-flex;margin-top:12px;font-size:15px;font-weight:800;color:#245f57}
+.collabFeature aside{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;text-align:center}
+.collabFeature aside strong{font-family:var(--zh-serif);font-size:22px;font-weight:600}
+.collabFeature aside i{font-style:normal;color:#a58c62}
+.collabFeature aside small{flex-basis:100%;font-size:10px;letter-spacing:.16em;color:#7b938d;margin-top:10px}
+.collabCommercial{margin-top:36px;padding-top:24px;border-top:1px solid #173f3815;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.collabCommercial span{font-family:var(--zh-serif);font-size:18px;font-weight:650}
+.collabCommercial p{font-size:14px!important;line-height:1.6!important;margin:0!important}
+.collabCommercial a{font-size:14px;margin:0}
+
+/* Chinese contact page: restrained, elegant, readable */
+.zhPage .contactShell{grid-template-columns:.82fr 1.18fr;gap:72px;padding-top:66px;min-height:calc(100vh - 78px)}
+.zhPage .contactIntro .eyebrow{font-size:15px;margin-top:55px;margin-bottom:12px}
+.zhPage .contactIntro h1.zhContactTitle{font-family:var(--zh-serif);font-size:clamp(43px,4.3vw,60px);line-height:1.22;letter-spacing:.025em;font-weight:650;margin:10px 0 24px;max-width:520px}
+.zhPage .contactIntro>p:not(.eyebrow){font-size:18px;line-height:1.8;max-width:530px}
+.zhPage .contactIntro>small{font-size:15px;line-height:1.7;margin-top:20px}
+.zhPage .contactFormWrap{padding:34px;border-radius:22px}
+.zhPage .contactForm{gap:20px}
+.zhPage .contactForm label{gap:9px}
+.zhPage .contactForm label>span{font-size:14px;font-weight:700}
+.zhPage .contactForm input,.zhPage .contactForm textarea{font-family:var(--zh-sans);font-size:16px;padding:15px 16px;border-radius:14px}
+.zhPage .contactForm input{min-height:54px}
+.zhPage .contactSubmit small{font-size:13px;line-height:1.5}
+.zhPage .contactSubmit button,.zhPage .contactSuccess button{font-size:14px;padding:13px 19px}
+
+/* Chinese business + other core pages */
+.zhPage .bizHero h1,.zhPage .fyHero h1,.zhPage .aboutHero h1,.zhPage .circleComing h1{font-family:var(--zh-serif);letter-spacing:.015em;line-height:1.17;font-weight:650}
+.zhPage .bizHero h1{font-size:clamp(43px,4.8vw,64px)}
+.zhPage .fyHero h1{font-size:clamp(42px,4.6vw,62px)}
+.zhPage .fyLead{font-family:var(--zh-serif);font-size:18px;line-height:1.75}
+.zhPage .choiceNo{font-size:16px}
+.zhPage .choiceText b{font-size:29px}
+.zhPage .choiceText small{font-size:15px;line-height:1.5}
+.zhPage .chooseHint{font-family:var(--zh-serif);font-size:18px}
+.zhPage .languageIndex{font-size:13px}
+.zhPage .languageOptions b{font-size:22px}
+.zhPage .journeyQuick b{font-size:22px}
+.zhPage .journeyQuick small{font-size:14px}
+.zhPage .journeyIntro h2{font-size:35px;line-height:1.3}
+.zhPage .journeyIntro>p:last-child{font-size:16px;line-height:1.75}
+.zhPage .journeyLinks b{font-size:21px}.zhPage .journeyLinks span{font-size:14px;line-height:1.5}
+.zhPage .guidanceBox h3{font-size:22px}.zhPage .guidanceBox p{font-size:15px;line-height:1.65}
+.zhPage .aboutHero h1{font-size:clamp(43px,4.6vw,62px)}
+.zhPage .nameStoryGrid h2,.zhPage .beliefCopy h2,.zhPage .aboutNbGrid h2,.zhPage .aboutClosing h2{font-family:var(--zh-serif);letter-spacing:.015em;line-height:1.25}
+.zhPage .nameStoryCopy{font-size:16px;line-height:1.85}
+.zhPage .aboutMission span{font-size:15px}.zhPage .aboutMission h3{font-family:var(--zh-serif);font-size:22px}.zhPage .aboutMission p{font-size:14px;line-height:1.65}
+
+@media(max-width:900px){
+  .homeCollabInner,.collabFeatureInner{grid-template-columns:1fr;gap:28px}
+  .homeCollab aside,.collabFeature aside{justify-content:flex-start}
+  .collabCommercial{grid-template-columns:1fr;gap:8px}
+  .zhPage .editorialFeature,.zhPage .storyMagazine,.zhPage .editorialBridge,.zhPage .editorialNote,.zhPage .communityLines{margin-left:0}
+  .zhPage .contactShell{grid-template-columns:1fr;gap:36px}
+  .zhPage .contactIntro .eyebrow{margin-top:25px}
+}
+@media(max-width:600px){
+  .zhHeroTitle{font-size:42px!important;gap:.08em .2em}
+  .homeCollabInner{padding:34px 0}
+  .homeCollab h2{font-size:29px}
+  .zhPage .editorialSectionTitle{grid-template-columns:40px 1fr}
+  .zhPage .editorialSectionTitle>span{font-size:16px}
+  .zhPage .communityLines>a,.zhPage .communityLines>div{grid-template-columns:40px 1fr}
+  .zhPage .communityLines b{grid-column:2}
+  .zhPage .contactForm{grid-template-columns:1fr}
+  .zhPage .contactForm label:nth-of-type(1),.zhPage .contactForm label:nth-of-type(2){grid-column:1/-1}
+}
+.zhPage .bizNo,.zhPage .nbSectionNo{font-size:17px;letter-spacing:.05em;color:#71928b;font-weight:650}
+.zhPage .bizSectionHead{grid-template-columns:60px 1fr;gap:20px}
+.zhPage .bizCapabilityGrid{margin-left:80px}
+.zhPage .bizSectionCta{margin-left:80px}
+.zhPage .nbSectionHead{grid-template-columns:70px 1fr;gap:18px}
+.zhPage .nbSection{padding:48px 0}
+.zhPage .nbSectionHead h2{font-family:var(--zh-serif);font-size:34px;line-height:1.3;letter-spacing:.01em}
+.zhPage .nbResourceCard small{font-size:12px;letter-spacing:.07em}
+.zhPage .nbResourceCard h3{font-family:var(--zh-serif);font-size:22px;line-height:1.3}
+.zhPage .nbResourceCard p{font-size:14px;line-height:1.65}
+@media(max-width:700px){.zhPage .bizCapabilityGrid,.zhPage .bizSectionCta{margin-left:0}.zhPage .bizSectionHead,.zhPage .nbSectionHead{grid-template-columns:1fr}.zhPage .bizNo,.zhPage .nbSectionNo{padding:0}}
