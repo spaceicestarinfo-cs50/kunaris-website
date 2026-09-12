@@ -28,12 +28,12 @@ export default function ProjectsPage(){
 
       <article className="editorialFeature">
         <div className="featureVisual"><BrowserMock kind="game"/></div>
-        <div className="featureCopy"><p className="featureNo">FEATURE 01 · DIGITAL LEARNING</p><h3>French Travel Adventure</h3><p>Practice useful French through travel situations, challenges and rewards — designed around real-life communication rather than memorization alone.</p><div className="featureMeta"><span>Interactive Learning</span><span>French</span><span>Gamified Experience</span></div><a href="/for-you/french#learning-game">View Project →</a></div>
+        <div className="featureCopy"><p className="featureNo">FEATURE 01 · DIGITAL LEARNING</p><h3>French Travel Adventure</h3><p>Practice useful French through travel situations, challenges and rewards — designed around real-life communication rather than memorization alone.</p><div className="featureMeta"><span>Interactive Learning</span><span>French</span><span>Gamified Experience</span></div><span className="comingSoonPill">Coming soon</span></div>
       </article>
 
-      <article className="editorialFeature reverse">
-        <div className="featureVisual"><BrowserMock kind="test"/></div>
-        <div className="featureCopy"><p className="featureNo">FEATURE 02 · ONLINE TOOL</p><h3>French Level Test</h3><p>Short A1 and A2 level checks that help learners understand where to begin before choosing a French learning path.</p><div className="featureMeta"><span>Assessment Tool</span><span>French Learning</span><span>Quick &amp; Free</span></div><div className="textActions"><a href="https://frenchtest.educationicestar.ca/A1" target="_blank" rel="noreferrer">Try A1 ↗</a><a href="https://frenchtest.educationicestar.ca/A2" target="_blank" rel="noreferrer">Try A2 ↗</a></div></div>
+      <article className="levelTestFeature">
+        <div className="levelTestIntro"><p className="featureNo">FEATURE 02 · ONLINE TOOL</p><h3>French Level Test</h3><p>Take a short test to check your current level and find a clearer starting point for your next step in French.</p><div className="levelTestBenefits"><span>About 10 minutes</span><span>Instant result</span><span>Learning guidance</span></div></div>
+        <div className="levelTestChoices"><a className="levelCard a1" href="https://frenchtest.educationicestar.ca/A1" target="_blank" rel="noreferrer"><i>A1</i><div><strong>Take the A1 Test</strong><small>Beginner · Start here</small></div><b>→</b></a><a className="levelCard a2" href="https://frenchtest.educationicestar.ca/A2" target="_blank" rel="noreferrer"><i>A2</i><div><strong>Take the A2 Test</strong><small>Elementary · Keep going</small></div><b>→</b></a></div>
       </article>
 
       <div className="editorialBridge"><span>Have a learning idea?</span><p>We also create educational games, assessment tools and custom digital learning experiences.</p><a href="/for-business#brand-digital">Explore what we can build →</a></div>
