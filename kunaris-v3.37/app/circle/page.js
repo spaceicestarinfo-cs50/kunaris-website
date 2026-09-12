@@ -1,0 +1,3 @@
+import SiteHeader from "../components/SiteHeader";
+export const metadata={title:"Kunaris Circle — Coming Soon",description:"Kunaris Circle is coming soon."};
+export default function CirclePage(){return <main className="circlePage"><SiteHeader active="circle"/><section className="circleComing fyShell"><a className="backLink" href="/">← Back to Kunaris</a><div className="circleOrb"><img src="/kunaris-sphere.png" alt=""/></div><p className="eyebrow">KUNARIS CIRCLE</p><h1>Something new<br/>is taking shape.</h1><p>Learning, experiences, benefits and more — all in one place.</p><span>COMING SOON</span></section></main>}

@@ -1,0 +1,1 @@
+export const metadata={title:"Kunaris Education & Media | Éducation, création & numérique",description:"Cours de langues, projets numériques, vidéo, image de marque, impression et formation pour les particuliers, entreprises et communautés."}; export default function Layout({children}){return children}
