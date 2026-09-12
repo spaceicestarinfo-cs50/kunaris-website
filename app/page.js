@@ -77,6 +77,6 @@ export default function Home(){
  <div className="footerBrand"><img className="footerSphere" src="/kunaris-sphere.png" alt=""/><span><img className="footerWordmark" src="/kunaris-wordmark.png" alt="Kunaris"/><b>Kunaris Education &amp; Media Inc.</b><small>People · Ideas · A Brighter Tomorrow</small></span></div>
  <div className="footerLinks"><a href="/for-you">For You</a><a href="/for-business">For Your Business</a><a href="/projects">Projects &amp; Community</a><a href="/circle">Kunaris Circle</a></div>
  <div className="footerLinks"><a href="/about">About</a><a href="/contact">Contact</a></div>
- <div className="legal"><b>EN⌄</b><small>Privacy Policy &nbsp;|&nbsp; Terms of Use</small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>
+ <div className="legal"><b>EN⌄</b><small><a href="/privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms">Terms of Use</a></small><small>© {new Date().getFullYear()} Kunaris Education &amp; Media Inc.</small></div>
 </footer>
 </main>}
