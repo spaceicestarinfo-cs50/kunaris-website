@@ -1089,3 +1089,102 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
   .zhHeroTitle{width:auto;font-size:39px!important;gap:.06em .18em!important;letter-spacing:.035em!important}
   .zhPage .contactIntro h1.zhContactTitle{font-size:38px!important}
 }
+
+/* V3.27 — cinematic Chinese hero title
+   Keep the approved WenKai-style typography, but give the nine-character signature
+   a stronger polished-metal / blade-reflection treatment. No external assets or fonts. */
+.zhHero{
+  position:relative;
+  isolation:isolate;
+}
+.zhHero:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:-7%;
+  top:3%;
+  width:min(760px,58vw);
+  height:360px;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 39% 43%,rgba(122,190,176,.18) 0%,rgba(122,190,176,.075) 34%,rgba(122,190,176,0) 69%),
+    radial-gradient(ellipse at 64% 34%,rgba(235,255,251,.76) 0%,rgba(235,255,251,0) 43%);
+  filter:blur(12px);
+}
+
+.zhHeroTitle{
+  overflow:visible!important;
+  background:none!important;
+  color:inherit!important;
+  -webkit-text-fill-color:initial!important;
+  filter:drop-shadow(0 8px 15px rgba(14,57,51,.075));
+  text-rendering:geometricPrecision;
+}
+.zhHeroTitle:after{display:none!important}
+
+.zhHeroTitle span,.zhHeroTitle em{
+  position:relative;
+  display:inline-block;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  background-repeat:no-repeat!important;
+  background-size:340% 100%,100% 100%!important;
+  background-position:-165% 0,0 0!important;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.23));
+  will-change:background-position;
+  animation:kunarisMetalSweep 7.2s cubic-bezier(.2,.72,.28,1) 1s infinite;
+}
+/* Deep jade -> teal -> pale jade across the three phrases.  The first gradient layer is
+   the moving silver/icy blade reflection; the second is the static phrase colour. */
+.zhHeroTitle span:nth-child(1){
+  background-image:
+    linear-gradient(112deg,transparent 0%,transparent 39%,rgba(186,233,224,0) 43%,rgba(221,250,245,.56) 46.5%,#f9fffe 49%,#ffffff 50%,rgba(211,248,241,.88) 51.5%,rgba(155,216,204,.18) 55%,transparent 59%,transparent 100%),
+    linear-gradient(96deg,#0c332e 0%,#143f38 43%,#275e56 100%)!important;
+}
+.zhHeroTitle span:nth-child(2){
+  background-image:
+    linear-gradient(112deg,transparent 0%,transparent 39%,rgba(186,233,224,0) 43%,rgba(221,250,245,.62) 46.5%,#f9fffe 49%,#ffffff 50%,rgba(211,248,241,.92) 51.5%,rgba(155,216,204,.2) 55%,transparent 59%,transparent 100%),
+    linear-gradient(96deg,#2c6a61 0%,#4c8c82 52%,#69a69a 100%)!important;
+}
+.zhHeroTitle em{
+  background-image:
+    linear-gradient(112deg,transparent 0%,transparent 39%,rgba(198,239,231,0) 43%,rgba(231,253,249,.68) 46.5%,#ffffff 49%,#ffffff 50%,rgba(224,251,246,.96) 51.5%,rgba(170,226,215,.24) 55%,transparent 59%,transparent 100%),
+    linear-gradient(96deg,#669e94 0%,#83b5ab 50%,#9bc6bd 100%)!important;
+}
+@keyframes kunarisMetalSweep{
+  0%,52%{background-position:-165% 0,0 0}
+  72%{background-position:42% 0,0 0}
+  86%,100%{background-position:175% 0,0 0}
+}
+
+/* A very restrained lens glint that appears only while the blade light is passing. */
+.zhHero .heroCopy{position:relative}
+.zhHero .heroCopy:after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  width:110px;
+  height:110px;
+  left:46%;
+  top:36px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(240,255,252,.34) 0%,rgba(149,218,205,.12) 28%,rgba(149,218,205,0) 70%);
+  filter:blur(7px);
+  opacity:0;
+  animation:kunarisLensGlint 7.2s ease-in-out 1s infinite;
+}
+@keyframes kunarisLensGlint{
+  0%,56%,88%,100%{opacity:0;transform:translateX(-42px) scale(.78)}
+  68%{opacity:.72;transform:translateX(32px) scale(1)}
+  78%{opacity:.22;transform:translateX(92px) scale(.9)}
+}
+@media (prefers-reduced-motion:reduce){
+  .zhHeroTitle span,.zhHeroTitle em{animation:none!important;background-position:0 0,0 0!important}
+  .zhHero .heroCopy:after{display:none!important}
+}
+@media (max-width:700px){
+  .zhHero:before{width:105vw;height:300px;left:-18%;top:1%}
+  .zhHero .heroCopy:after{display:none}
+}
