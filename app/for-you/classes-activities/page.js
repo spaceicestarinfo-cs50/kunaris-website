@@ -19,8 +19,8 @@ export default function ClassesActivitiesPage(){
   <section id="conversation-club" className="activityFeature conversationFeature">
    <div className="fyShell activityFeatureInner">
     <div className="activityNumber">01</div>
-    <div className="activityCopy"><p className="eyebrow">FRENCH CONVERSATION CLUB</p><h2>Speak more. Worry less.</h2><p>Practice French in a relaxed and friendly setting. Our conversation sessions give learners more chances to speak, interact with others and build confidence through real communication.</p><div className="activityPills"><span>Online sessions</span><span>In-person sessions</span><span>Real conversation</span></div></div>
-    <aside className="activityAside"><small>SESSIONS</small><strong>Available throughout the year</strong><p>New session dates are announced as they become available.</p><a href="mailto:icestarlanguages@gmail.com?subject=French%20Conversation%20Club%20-%20Upcoming%20Sessions">See Upcoming Sessions →</a></aside>
+    <div className="activityCopy"><p className="eyebrow">FRENCH CONVERSATION CLUB</p><h2>Speak more. Worry less.</h2><p>A relaxed space for practising French, meeting others and enjoying real conversation. New activities will be announced as the program develops.</p><div className="activityPills"><span>Conversation</span><span>Community</span><span>French practice</span></div></div>
+    <aside className="activityAside"><small>STATUS</small><strong>Updates coming soon</strong><p>Future conversation activities and dates will be posted here when confirmed.</p><span className="statusOnly">Updates coming soon</span></aside>
    </div>
   </section>
 

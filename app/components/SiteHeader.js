@@ -3,6 +3,7 @@ import {useState} from "react";
 
 export default function SiteHeader({active="",locale="en"}){
   const [open,setOpen]=useState("");
+  const [mobileOpen,setMobileOpen]=useState(false);
   const zh=locale==="zh";
   const fr=locale==="fr";
   const prefix=zh?"/zh":fr?"/fr":"";
@@ -18,6 +19,7 @@ export default function SiteHeader({active="",locale="en"}){
       <img className="headerSphere" src="/kunaris-sphere.png" alt=""/>
       <span className="wordmarkWrap"><img src="/kunaris-wordmark.png" alt="Kunaris"/><small>Kunaris Education &amp; Media Inc.</small></span>
     </a>
+    <button className="mobileMenuButton" type="button" aria-label={mobileOpen?(zh?"关闭菜单":fr?"Fermer le menu":"Close menu"):(zh?"打开菜单":fr?"Ouvrir le menu":"Open menu")} aria-expanded={mobileOpen} onClick={()=>setMobileOpen(!mobileOpen)}><span></span><span></span><span></span></button>
     <nav className="mainNav">
       <div className={"navDrop "+(open==="you"?"isOpen":"")} onMouseEnter={()=>setOpen("you")}>
         <a className={"navTop "+(active==="you"?"active":"")} href={`${prefix}/for-you`}>{labels.you}</a>
@@ -39,5 +41,14 @@ export default function SiteHeader({active="",locale="en"}){
         <div className="langMenu"><a className={!zh?"current":""} href="/">EN <small>English</small></a><a className={fr?"current":""} href="/fr">FR <small>Français</small></a><a className={zh?"current":""} href="/zh">中文 <small>简体中文</small></a></div>
       </div>
     </nav>
+    <div className={"mobileNavPanel "+(mobileOpen?"isOpen":"")} aria-hidden={!mobileOpen}>
+      <a href={`${prefix}/for-you`} onClick={()=>setMobileOpen(false)}>{labels.you}</a>
+      <a href={`${prefix}/for-business`} onClick={()=>setMobileOpen(false)}>{labels.business}</a>
+      <a href={`${prefix}/projects`} onClick={()=>setMobileOpen(false)}>{labels.projects}</a>
+      <a href={`${prefix}/circle`} onClick={()=>setMobileOpen(false)}>{labels.circle}</a>
+      <a href={`${prefix}/about`} onClick={()=>setMobileOpen(false)}>{labels.about}</a>
+      <a href={`${prefix}/contact`} onClick={()=>setMobileOpen(false)}>{labels.contact}</a>
+      <div className="mobileLang"><a href="/">EN</a><a href="/fr">FR</a><a href="/zh">中文</a></div>
+    </div>
   </header>
 }

@@ -54,7 +54,7 @@ export default function ProjectsPage(){
     <section id="community" className="editorialSection fyShell communityEditorial">
       <header className="editorialSectionTitle"><span>03</span><div><p className="eyebrow">COMMUNITY</p><h2>Better when people connect.</h2><p>Learning, activities and collaborations that create useful connections around us.</p></div></header>
       <div className="communityLines">
-        <a href="/for-you/classes-activities#conversation-club"><span>01</span><div><small>LANGUAGE &amp; COMMUNITY</small><h3>French Conversation Club</h3><p>Online and in-person opportunities to practise French in a relaxed, social setting.</p></div><b>Explore →</b></a>
+        <div><span>01</span><div><small>LANGUAGE &amp; COMMUNITY</small><h3>French Conversation Club</h3><p>A relaxed space for French conversation and community. New activities will be announced as they are confirmed.</p></div><b>Updates coming soon</b></div>
         <div><span>02</span><div><small>COMMUNITY PROJECTS</small><h3>Activities &amp; Local Collaboration</h3><p>Workshops, activities and creative collaborations as new projects take shape.</p></div><b>Growing</b></div>
         <div><span>03</span><div><small>NEW BRUNSWICK</small><h3>Future Partnerships</h3><p>Education, community, local business and destination projects we hope to grow into.</p></div><b>Looking ahead</b></div>
       </div>

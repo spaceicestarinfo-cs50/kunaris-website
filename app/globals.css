@@ -1338,3 +1338,44 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
 .zhPage .levelTestIntro h3,.zhPage .levelCard strong{font-family:"Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif!important;font-weight:700}.zhPage .levelTestIntro>p:not(.featureNo){font-family:"Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","PingFang SC",sans-serif}
 @media(max-width:850px){.levelTestFeature{grid-template-columns:1fr;padding:30px 24px;gap:28px}.levelTestChoices{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.levelTestFeature{margin:38px 0 52px;padding:26px 18px;border-radius:24px}.levelTestChoices{grid-template-columns:1fr}.levelCard{min-height:126px}.levelTestIntro h3{font-size:30px}}
+
+.statusOnly{display:inline-flex;align-self:flex-start;margin-top:8px;padding:8px 12px;border-radius:999px;background:#e7f1ed;color:#397f78;font-size:11px;font-weight:800;letter-spacing:.02em}.playBand>.comingSoonPill,.languageClosing>.comingSoonPill{display:inline-flex;width:max-content;margin-top:12px}
+
+/* V3.35 — mobile navigation + compact homepage hero */
+.mobileMenuButton,.mobileNavPanel{display:none}
+@media(max-width:900px){
+  .siteHeader.unifiedHeader{height:76px!important;padding:0 18px!important;position:sticky!important;overflow:visible!important}
+  .unifiedHeader .headerBrand{min-width:0!important;gap:4px!important;max-width:calc(100% - 58px)}
+  .unifiedHeader .headerSphere{width:42px!important;height:42px!important;flex-basis:42px!important}
+  .unifiedHeader .wordmarkWrap{width:185px!important}
+  .unifiedHeader .wordmarkWrap img{width:168px!important;height:38px!important}
+  .unifiedHeader .wordmarkWrap small{width:185px!important;font-size:9px!important;white-space:nowrap!important}
+  .mobileMenuButton{display:flex;width:42px;height:42px;border:1px solid #173f3822;border-radius:50%;background:#f8fbf7;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;cursor:pointer;z-index:32}
+  .mobileMenuButton span{display:block;width:18px;height:1.5px;background:#173f38;border-radius:2px}
+  .mobileNavPanel{display:flex;position:absolute;left:0;right:0;top:76px;background:rgba(248,251,247,.98);backdrop-filter:blur(14px);border-top:1px solid #173f3810;border-bottom:1px solid #173f3818;box-shadow:0 18px 34px #173f3812;padding:14px 20px 18px;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.18s ease;z-index:30}
+  .mobileNavPanel.isOpen{opacity:1;visibility:visible;transform:none}
+  .mobileNavPanel>a{font-size:16px;font-weight:750;padding:12px 3px;border-bottom:1px solid #173f3810;color:#173f38}
+  .mobileLang{display:flex;gap:9px;padding-top:14px}
+  .mobileLang a{border:1px solid #173f3820;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:800;background:#fff}
+  .hero{min-height:auto!important;padding:42px 0 34px!important;grid-template-columns:1fr!important;gap:20px!important}
+  .heroCopy h1{font-size:clamp(42px,12vw,58px)!important;line-height:.98!important}
+  .heroCopy h2{font-size:20px!important;margin-top:22px!important}
+  .heroCopy>p:last-of-type{font-size:16px!important}
+  .heroVisual{height:175px!important;justify-content:flex-end!important;padding-right:9%!important;margin-top:-2px!important;overflow:visible!important}
+  .heroVisual .glow{width:180px!important;height:180px!important;right:5%!important}
+  .heroVisual img{width:145px!important}
+  .heroVisual i{right:1%!important;bottom:20px!important;font-size:14px!important}
+}
+@media(max-width:520px){
+  .siteHeader.unifiedHeader{height:70px!important;padding:0 14px!important}
+  .unifiedHeader .headerSphere{width:38px!important;height:38px!important;flex-basis:38px!important}
+  .unifiedHeader .wordmarkWrap{width:164px!important}
+  .unifiedHeader .wordmarkWrap img{width:150px!important;height:34px!important}
+  .unifiedHeader .wordmarkWrap small{width:164px!important;font-size:8px!important}
+  .mobileNavPanel{top:70px}
+  .hero{padding-top:34px!important}
+  .heroVisual{height:150px!important;padding-right:7%!important}
+  .heroVisual .glow{width:155px!important;height:155px!important}
+  .heroVisual img{width:126px!important}
+  .heroVisual i{font-size:12px!important;bottom:14px!important}
+}
