@@ -1,13 +1,31 @@
 "use client";
 import {useState} from "react";
+import {usePathname} from "next/navigation";
 
 export default function SiteHeader({active="",locale="en"}){
   const [open,setOpen]=useState("");
   const [mobileOpen,setMobileOpen]=useState(false);
+  const pathname=usePathname()||"/";
   const zh=locale==="zh";
   const fr=locale==="fr";
   const prefix=zh?"/zh":fr?"/fr":"";
   const close=()=>setOpen("");
+  const localPath=pathname.replace(/^\/(fr|zh)(?=\/|$)/,"")||"/";
+  const localeHref=(target)=>{
+    if(target==="en") return localPath;
+    const base=target==="fr"?"/fr":"/zh";
+    return localPath==="/"?base:`${base}${localPath}`;
+  };
+  const switchLocale=(target,e)=>{
+    const href=localeHref(target);
+    setMobileOpen(false);
+    setOpen("");
+    // Force a normal navigation. This is more reliable in mobile in-app browsers.
+    if(typeof window!=="undefined"){
+      e?.preventDefault?.();
+      window.location.assign(href);
+    }
+  };
   const labels=zh?{
     you:"个人服务",business:"企业服务",projects:"项目与社区",circle:"Kunaris Circle",about:"关于我们",contact:"联系我们",
     learn:"语言学习",classes:"课程与活动",journey:"加拿大生活指南",
@@ -38,7 +56,7 @@ export default function SiteHeader({active="",locale="en"}){
       <a className={active==="contact"?"active":""} href={`${prefix}/contact`}>{labels.contact}</a>
       <div className={"langDrop "+(open==="lang"?"isOpen":"")} onMouseEnter={()=>setOpen("lang")}>
         <button className="lang" onClick={()=>setOpen(open==="lang"?"":"lang")}>{zh?"中文":fr?"FR":"EN"}⌄</button>
-        <div className="langMenu"><a className={!zh?"current":""} href="/">EN <small>English</small></a><a className={fr?"current":""} href="/fr">FR <small>Français</small></a><a className={zh?"current":""} href="/zh">中文 <small>简体中文</small></a></div>
+        <div className="langMenu"><a className={!zh&&!fr?"current":""} href={localeHref("en")} onClick={(e)=>switchLocale("en",e)}>EN <small>English</small></a><a className={fr?"current":""} href={localeHref("fr")} onClick={(e)=>switchLocale("fr",e)}>FR <small>Français</small></a><a className={zh?"current":""} href={localeHref("zh")} onClick={(e)=>switchLocale("zh",e)}>中文 <small>简体中文</small></a></div>
       </div>
     </nav>
     <div className={"mobileNavPanel "+(mobileOpen?"isOpen":"")} aria-hidden={!mobileOpen}>
@@ -48,7 +66,7 @@ export default function SiteHeader({active="",locale="en"}){
       <a href={`${prefix}/circle`} onClick={()=>setMobileOpen(false)}>{labels.circle}</a>
       <a href={`${prefix}/about`} onClick={()=>setMobileOpen(false)}>{labels.about}</a>
       <a href={`${prefix}/contact`} onClick={()=>setMobileOpen(false)}>{labels.contact}</a>
-      <div className="mobileLang"><a href="/">EN</a><a href="/fr">FR</a><a href="/zh">中文</a></div>
+      <div className="mobileLang" aria-label={zh?"语言切换":fr?"Changer de langue":"Language switcher"}><a className={!zh&&!fr?"current":""} href={localeHref("en")} onClick={(e)=>switchLocale("en",e)}>EN</a><a className={fr?"current":""} href={localeHref("fr")} onClick={(e)=>switchLocale("fr",e)}>FR</a><a className={zh?"current":""} href={localeHref("zh")} onClick={(e)=>switchLocale("zh",e)}>中文</a></div>
     </div>
   </header>
 }

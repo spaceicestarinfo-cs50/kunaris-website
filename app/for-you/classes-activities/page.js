@@ -27,8 +27,8 @@ export default function ClassesActivitiesPage(){
   <section id="music" className="musicSection fyShell">
    <div className="sectionLead"><p className="eyebrow">MUSIC CLASSES</p><h2>Learn music at your own pace.</h2><p>Whether you are starting for the first time or returning to something you love, our music classes are designed to make learning enjoyable and personal.</p></div>
    <div className="musicGrid">
-    <article><span>PIANO</span><h3>Piano Lessons</h3><p>Build musical foundations, technique and confidence through guided learning adapted to your level and pace.</p><a href="mailto:icestarlanguages@gmail.com?subject=Kunaris%20Piano%20Lessons%20Inquiry">Ask About Piano Lessons →</a></article>
-    <article><span>SINGING</span><h3>Singing Lessons</h3><p>Explore your voice, develop technique and enjoy expressing yourself through music in a supportive learning environment.</p><a href="mailto:icestarlanguages@gmail.com?subject=Kunaris%20Singing%20Lessons%20Inquiry">Ask About Singing Lessons →</a></article>
+    <article><span>PIANO</span><h3>Piano Lessons</h3><p>Build musical foundations, technique and confidence through guided learning adapted to your level and pace.</p><a href="/contact">Ask About Piano Lessons →</a></article>
+    <article><span>SINGING</span><h3>Singing Lessons</h3><p>Explore your voice, develop technique and enjoy expressing yourself through music in a supportive learning environment.</p><a href="/contact">Ask About Singing Lessons →</a></article>
    </div>
   </section>
 
