@@ -1453,33 +1453,45 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
   .nbHero h1{font-size:36px!important}
 }
 
-/* V3.39 desktop dropdown stability fix — CSS only, keeps the V3.37 header logic */
+
+/* V3.40 desktop dropdown stability fix — keep menus open while pointer moves into the panel */
 @media (min-width:901px){
   .unifiedHeader .navDrop,
   .unifiedHeader .langDrop{
     position:relative;
-  }
-  .unifiedHeader .navDrop::after,
-  .unifiedHeader .langDrop::after{
-    content:"";
-    position:absolute;
-    left:-10px;
-    right:-10px;
-    top:calc(100% - 8px);
-    height:24px;
-    background:transparent;
-    pointer-events:auto;
+    padding-bottom:12px;
+    margin-bottom:-12px;
   }
   .unifiedHeader .navMenu,
   .unifiedHeader .langMenu{
-    margin-top:-4px;
+    top:82px;
+    margin-top:0;
   }
+  .unifiedHeader .navDrop.isOpen .navMenu,
   .unifiedHeader .navDrop:hover .navMenu,
-  .unifiedHeader .navDrop:focus-within .navMenu,
+  .unifiedHeader .navDrop:focus-within .navMenu{
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+    transform:translate(-50%,0)!important;
+  }
+  .unifiedHeader .langDrop.isOpen .langMenu,
   .unifiedHeader .langDrop:hover .langMenu,
   .unifiedHeader .langDrop:focus-within .langMenu{
     opacity:1!important;
     visibility:visible!important;
     pointer-events:auto!important;
+    transform:translate(0,0)!important;
+  }
+  /* Invisible hover bridge between the top label and the dropdown panel. */
+  .unifiedHeader .navDrop::after,
+  .unifiedHeader .langDrop::after{
+    content:"";
+    position:absolute;
+    left:-12px;
+    right:-12px;
+    top:100%;
+    height:18px;
+    background:transparent;
   }
 }
