@@ -1452,3 +1452,4 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
   .featureCopy h3{font-size:28px!important}
   .nbHero h1{font-size:36px!important}
 }
+\n\n/* V3.38 — robust desktop dropdown navigation */\n@media(min-width:901px){\n  /* Keep the dropdown physically connected to its trigger so the cursor never falls through a dead gap. */\n  .unifiedHeader .navDrop,.unifiedHeader .langDrop{align-self:stretch;display:flex;align-items:center}\n  .unifiedHeader .navMenu{top:calc(100% - 12px)!important}\n  .unifiedHeader .langMenu{top:calc(100% - 12px)!important}\n  .unifiedHeader .navMenu::after,.unifiedHeader .langMenu::after{\n    content:"";position:absolute;left:0;right:0;top:-18px;height:20px;background:transparent;\n  }\n  .unifiedHeader .navDrop.isOpen .navMenu,.unifiedHeader .langDrop.isOpen .langMenu{\n    opacity:1!important;visibility:visible!important;pointer-events:auto!important;\n  }\n}\n
