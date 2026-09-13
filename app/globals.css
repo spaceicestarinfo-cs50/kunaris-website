@@ -1495,3 +1495,43 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
     background:transparent;
   }
 }
+
+/* V3.41 desktop dropdown geometry fix — make the trigger fill the header so the menu touches it */
+@media (min-width:901px){
+  .siteHeader.unifiedHeader .mainNav{
+    align-self:stretch;
+  }
+  .siteHeader.unifiedHeader .navDrop,
+  .siteHeader.unifiedHeader .langDrop{
+    display:flex;
+    align-items:center;
+    align-self:stretch;
+    position:relative;
+    padding-bottom:0!important;
+    margin-bottom:0!important;
+  }
+  .siteHeader.unifiedHeader .navDrop .navTop{
+    display:flex;
+    align-items:center;
+    height:100%;
+    padding-top:0!important;
+    padding-bottom:0!important;
+  }
+  .siteHeader.unifiedHeader .langDrop .lang{
+    display:flex;
+    align-items:center;
+    height:100%;
+    padding-top:0!important;
+    padding-bottom:0!important;
+  }
+  .siteHeader.unifiedHeader .navMenu,
+  .siteHeader.unifiedHeader .langMenu{
+    top:calc(100% - 4px)!important;
+    margin-top:0!important;
+  }
+  .siteHeader.unifiedHeader .navDrop::after,
+  .siteHeader.unifiedHeader .langDrop::after{
+    top:calc(100% - 10px)!important;
+    height:14px!important;
+  }
+}
