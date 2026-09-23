@@ -1571,3 +1571,70 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
   .footerContactRow{white-space:normal;gap:6px;}
   .footerContactRow span{min-width:116px;}
 }
+
+/* V3.46 — compact horizontal contact strip; preserve approved footer brand composition */
+.footerContactList{
+  display:grid!important;
+  grid-template-columns:repeat(3,max-content)!important;
+  column-gap:14px!important;
+  row-gap:0!important;
+  align-items:start!important;
+  justify-content:center!important;
+  width:auto!important;
+  max-width:none!important;
+  margin-top:10px!important;
+  font-size:10px!important;
+  line-height:1.25!important;
+  text-align:center!important;
+  color:#68807a!important;
+}
+.footerContactRow{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  gap:2px!important;
+  white-space:nowrap!important;
+  position:relative;
+}
+.footerContactRow:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:-7px;
+  top:2px;
+  bottom:2px;
+  width:1px;
+  background:rgba(23,63,56,.12);
+}
+.footerContactRow span{
+  min-width:0!important;
+  color:#68807a!important;
+  font-weight:400!important;
+}
+.footerContactRow a{
+  color:#234f47!important;
+  font-weight:600!important;
+  text-decoration:none!important;
+  border-bottom:1px solid rgba(35,79,71,.18)!important;
+}
+/* Keep the sphere beside the company block instead of letting contact info displace it. */
+footer .footerBrand,
+.fyFooter .footerBrand{
+  flex-direction:row!important;
+  align-items:center!important;
+}
+footer .footerBrand>span,
+.fyFooter .footerBrand>div,
+.fyFooter .footerBrand>span{
+  flex:0 0 auto!important;
+}
+@media(max-width:720px){
+  .footerContactList{
+    grid-template-columns:1fr!important;
+    justify-content:start!important;
+    row-gap:6px!important;
+    text-align:left!important;
+    margin-top:9px!important;
+  }
+  .footerContactRow{align-items:flex-start!important;}
+  .footerContactRow:not(:last-child)::after{display:none!important;}
+}
