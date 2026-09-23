@@ -1,12 +1,12 @@
 "use client";
 import SiteHeader from "../../components/SiteHeader";
 import { useState } from "react";
-const FORM_ENDPOINT="https://formsubmit.co/ajax/icestarlanguages@gmail.com";
+const FORM_ENDPOINT="https://formsubmit.co/ajax/courses@kunaris.ca";
 const COURSES=["English from Beginner to B2 — Online","English from Beginner to B2 — In Person","IELTS Preparation — 1-on-1","CELPIP Preparation — 1-on-1","Not sure yet"];
 export default function EnglishPage(){
  const [open,setOpen]=useState(false),[type,setType]=useState("Course Inquiry"),[course,setCourse]=useState("Not sure yet"),[status,setStatus]=useState("idle"),[error,setError]=useState("");
  const show=(t,c="Not sure yet")=>{setType(t);setCourse(c);setStatus("idle");setError("");setOpen(true)};
- const submit=async e=>{e.preventDefault();setStatus("sending");setError("");const d=new FormData(e.currentTarget);d.set("Inquiry Type",type);d.set("Course / Program",course);d.set("_subject",`[Kunaris English Inquiry] ${type} — ${course}`);d.set("_template","table");d.set("_captcha","false");try{const r=await fetch(FORM_ENDPOINT,{method:"POST",body:d,headers:{Accept:"application/json"}});const j=await r.json().catch(()=>({}));if(!r.ok||j.success===false)throw new Error();setStatus("sent");e.currentTarget.reset()}catch{setStatus("error");setError("We couldn't send your request right now. Please try again or email icestarlanguages@gmail.com.")}};
+ const submit=async e=>{e.preventDefault();setStatus("sending");setError("");const d=new FormData(e.currentTarget);d.set("Inquiry Type",type);d.set("Course / Program",course);d.set("_subject",`[Kunaris English Inquiry] ${type} — ${course}`);d.set("_template","table");d.set("_captcha","false");try{const r=await fetch(FORM_ENDPOINT,{method:"POST",body:d,headers:{Accept:"application/json"}});const j=await r.json().catch(()=>({}));if(!r.ok||j.success===false)throw new Error();setStatus("sent");e.currentTarget.reset()}catch{setStatus("error");setError("We couldn't send your request right now. Please try again or email courses@kunaris.ca.")}};
  return <main className="languagePage englishPage"><SiteHeader active="you"/>
  <section className="languageHero fyShell"><a className="backLink" href="/for-you">← Learn a Language</a><p className="eyebrow">ENGLISH</p><h1>Build your English.<br/>Open more possibilities.</h1><p>From everyday communication to academic, professional and test preparation, find the learning path that fits your goals.</p></section>
  <section className="languageCourses fyShell"><div className="sectionLead"><p className="eyebrow">ENGLISH CLASSES</p><h2>Choose the path that fits your goal.</h2></div><div className="englishCourseGrid">

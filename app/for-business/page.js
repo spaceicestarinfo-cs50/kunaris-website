@@ -73,9 +73,9 @@ function ServiceSection({service}){
       <div><p className="eyebrow">{service.label}</p><h2>{service.title}</h2><p className="bizIntro">{service.text}</p></div>
     </div>
     <div className="bizCapabilityGrid">
-      {service.items.map(([title,text])=><a className="bizCapabilityCard" key={title} href="/contact"><span>↗</span><h3>{title}</h3><p>{text}</p></a>)}
+      {service.items.map(([title,text])=><a className="bizCapabilityCard" key={title} href="mailto:sales@kunaris.ca"><span>↗</span><h3>{title}</h3><p>{text}</p></a>)}
     </div>
-    <a className="bizSectionCta" href="/contact">{service.cta} →</a>
+    <a className="bizSectionCta" href="mailto:sales@kunaris.ca">{service.cta} →</a>
   </section>
 }
 
@@ -87,7 +87,7 @@ export default function ForBusinessPage(){
    <p className="eyebrow">FOR YOUR BUSINESS</p>
    <h1>You have an idea.<br/>We help you bring it to life.</h1>
    <p>From brand identity and websites to apps, videos, training and branded products, Kunaris brings education, creativity and technology together to help organizations grow.</p>
-   <div className="bizHeroActions"><a href="#brand-digital">Explore Services ↓</a><a href="/contact">Tell Us What You Need →</a></div>
+   <div className="bizHeroActions"><a href="#brand-digital">Explore Services ↓</a><a href="mailto:sales@kunaris.ca">Tell Us What You Need →</a></div>
   </section>
 
   <section className="bizOverview fyShell" aria-label="Business services">
@@ -111,7 +111,7 @@ export default function ForBusinessPage(){
 
   <section className="bizClosing fyShell">
    <div><p className="eyebrow">START WITH THE IDEA</p><h2>Not sure which service you need?</h2><p>Tell us what you are trying to create, improve or promote. We can help you identify a practical starting point and shape the project from there.</p></div>
-   <a href="/contact">Start a Conversation →</a>
+   <a href="mailto:sales@kunaris.ca">Start a Conversation →</a>
   </section>
 
   <footer className="fyFooter"><div className="fyShell footerInner"><div className="footerBrand"><img src="/kunaris-sphere.png" alt=""/><div><b>Kunaris Education &amp; Media Inc.</b><small>Learn. Create. Connect.</small></div></div><a href="/">Back to Home ↑</a></div></footer>

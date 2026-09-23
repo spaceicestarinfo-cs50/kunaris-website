@@ -3,7 +3,7 @@ import SiteHeader from "../../components/SiteHeader";
 
 import { useState } from "react";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/icestarlanguages@gmail.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/courses@kunaris.ca";
 
 const COURSE_OPTIONS = [
   "4-Person Small Group Online",
@@ -52,7 +52,7 @@ export default function FrenchPage(){
    e.currentTarget.reset();
   }catch(err){
    setStatus("error");
-   setError("We couldn't send your request right now. Please try again or email icestarlanguages@gmail.com.");
+   setError("We couldn't send your request right now. Please try again or email courses@kunaris.ca.");
   }
  };
 
