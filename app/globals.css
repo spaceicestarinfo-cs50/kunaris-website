@@ -1536,37 +1536,38 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
   }
 }
 
-
-/* V3.44 contextual contact email — visible on every page */
-.siteEmailFooter{
-  border-top:1px solid rgba(31,73,65,.12);
-  background:#f8fbf7;
-  color:#526b66;
-}
-.siteEmailFooterInner{
-  width:min(1180px,calc(100% - 48px));
-  margin:0 auto;
-  min-height:62px;
+/* V3.45 three contact emails inside every page footer brand block */
+.footerContactList{
   display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  font-size:14px;
+  flex-direction:column;
+  gap:4px;
+  margin-top:12px;
+  font-size:11px;
+  line-height:1.45;
+  color:#526b66;
+  text-align:left;
+  width:max-content;
+  max-width:100%;
 }
-.siteEmailFooterInner span{opacity:.72;}
-.siteEmailFooterInner a{
+.footerContactRow{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  white-space:nowrap;
+}
+.footerContactRow span{
+  min-width:126px;
+  color:#68807a;
+}
+.footerContactRow a{
   color:#234f47;
   font-weight:600;
   text-decoration:none;
-  border-bottom:1px solid rgba(35,79,71,.25);
+  border-bottom:1px solid rgba(35,79,71,.22);
 }
-.siteEmailFooterInner a:hover{border-bottom-color:currentColor;}
-@media(max-width:700px){
-  .siteEmailFooterInner{
-    width:min(100% - 32px,1180px);
-    min-height:58px;
-    font-size:13px;
-    flex-wrap:wrap;
-    gap:6px 9px;
-  }
+.footerContactRow a:hover{border-bottom-color:currentColor;}
+@media(max-width:600px){
+  .footerContactList{font-size:10.5px;margin-top:10px;}
+  .footerContactRow{white-space:normal;gap:6px;}
+  .footerContactRow span{min-width:116px;}
 }
