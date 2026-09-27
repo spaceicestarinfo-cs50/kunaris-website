@@ -16,7 +16,7 @@ export default function ForYouPage() {
       <section className="fyHero fyShell">
         <p className="eyebrow">FOR YOU</p>
         <h1>Learn. Explore. Grow.</h1>
-        <p className="fyLead">Learning can open a door, spark a new interest, or help you build a life somewhere new. Start with what matters to you.</p>
+        <p className="fyLead">Learn a language, explore new interests, find reliable information for life in Canada, or get a simple digital tool for your own small business. Start with what matters to you.</p>
       </section>
 
       <section id="languages" className="choiceMenu fyShell">
@@ -69,6 +69,14 @@ export default function ForYouPage() {
             <a href="/for-you/journey#work"><b>Work</b><small>Build experience</small><span>→</span></a>
             <a href="/for-you/journey#live"><b>Build a Life</b><small>Plan your future</small><span>→</span></a>
           </div>}
+        </article>
+        <article id="small-business" className={"accordion "+(open==="small-business"?"expanded":"")}>
+          <button className="accordionHead" onClick={()=>toggle("small-business")} aria-expanded={open==="small-business"}>
+            <span className="choiceNo">04</span>
+            <span className="choiceText"><b>Tools for Your Small Business</b><small>Simple websites, booking pages and ordering apps for independent businesses.</small></span>
+            <Arrow open={open==="small-business"}/>
+          </button>
+          {open==="small-business" && <div className="accordionBody"><p className="chooseHint">For home cooks, hairstylists and other independent service providers: tell us what customers need to see, book or order.</p><div className="languageOptions threeOptions"><a href="/contact"><b>Menu &amp; orders</b><span>→</span></a><a href="/contact"><b>Booking page</b><span>→</span></a><a href="/contact"><b>Simple website</b><span>→</span></a></div></div>}
         </article>
       </section>
 

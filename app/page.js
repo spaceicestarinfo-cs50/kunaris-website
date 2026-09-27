@@ -15,7 +15,7 @@ export default function Home(){
   <p className="eyebrow">PEOPLE · IDEAS · A BRIGHTER TOMORROW</p>
   <h1><span>Learn.</span><span>Create.</span><em>Connect.</em></h1>
   <h2>Education and creative digital solutions for a more open and brighter world.</h2>
-  <p>Learning for you. Websites, apps, learning tools, videos, branding and more for your business.</p>
+  <p>Learn a language or start a small business with simple digital tools. We also create websites, apps, videos, branding and training for businesses.</p>
   <a className="cta" href="#services">Discover Kunaris <Arrow/></a>
  </div>
  <div className="heroVisual"><span className="glow"></span><img src="/kunaris-sphere.png" alt="Kunaris sphere"/><i>Ideas for a<br/>brighter tomorrow</i></div>
@@ -26,11 +26,12 @@ export default function Home(){
   <div className="cardWash washLearning"></div>
   <div className="cardContent">
    <div className="serviceHeading"><h2>For You</h2><span className="bow">🏹</span></div>
-   <p className="serviceDescriptor">LANGUAGES · ACTIVITIES · YOUR JOURNEY</p>
+   <p className="serviceDescriptor">LANGUAGES · ACTIVITIES · SMALL BUSINESS · YOUR JOURNEY</p>
    <div className="items">
     <a className="menuItem" href="/for-you"><span className="menuIcon">◇</span><span><strong>Learn a language</strong><small>French · English · Spanish · Cantonese</small></span></a>
     <Item icon="▱" title="Classes & Activities" sub="Workshops · Interest Classes · Interactive Learning" href="/for-you/classes-activities"/>
     <Item icon="◎" title="Your Journey in Canada" sub="Study · Work · Build a Life" href="/for-you/journey"/>
+    <Item icon="▣" title="Tools for Your Small Business" sub="Menus · Orders · Booking · Simple Websites" href="/for-you#small-business"/>
    </div>
    <a className="cardCta" href="/for-you">Explore for You</a>
   </div>

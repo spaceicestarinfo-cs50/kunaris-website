@@ -1,3 +1,3 @@
 import { seoMetadata } from "../../seo";
-export const metadata = seoMetadata("fr", "/for-you", "Langues et activités | Kunaris Education & Media", "Langues et activités chez Kunaris Education & Media. Découvrez nos services et contactez-nous pour discuter de votre projet.");
+export const metadata = seoMetadata("fr", "/for-you", "Langues et outils pour petites entreprises | Kunaris", "Apprenez une langue et découvrez des outils simples pour votre petite activité : menus en ligne, réservations et sites Web.");
 export default function Layout({ children }) { return children; }
