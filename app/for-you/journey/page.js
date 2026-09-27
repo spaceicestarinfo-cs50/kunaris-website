@@ -1,3 +1,5 @@
+import { seoMetadata } from "../../seo";
+export const metadata = seoMetadata("en", "/for-you/journey", "Your Journey in Canada | Kunaris Education & Media", "Your Journey in Canada at Kunaris Education & Media. Discover our services and get in touch to discuss your goals.");
 import SiteHeader from "../../components/SiteHeader";
 const studyResources = [
   {title:"Universities & Colleges", text:"Explore New Brunswick universities, public colleges and other post-secondary options.", href:"https://www.gnb.ca/en/topic/education-training/post-secondary/universities-colleges.html"},

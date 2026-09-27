@@ -1,3 +1,5 @@
+import { seoMetadata } from "../seo";
+export const metadata = seoMetadata("en", "/projects", "Projects & Collaborations | Kunaris Education & Media", "Projects & Collaborations at Kunaris Education & Media. Discover our services and get in touch to discuss your goals.");
 import SiteHeader from "../components/SiteHeader";
 
 function BrowserMock({kind}){

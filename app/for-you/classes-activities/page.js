@@ -1,3 +1,5 @@
+import { seoMetadata } from "../../seo";
+export const metadata = seoMetadata("en", "/for-you/classes-activities", "Classes & Activities | Kunaris Education & Media", "Classes & Activities at Kunaris Education & Media. Discover our services and get in touch to discuss your goals.");
 import SiteHeader from "../../components/SiteHeader";
 export default function ClassesActivitiesPage(){
  return <main className="activitiesPage">

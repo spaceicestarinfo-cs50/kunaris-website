@@ -1,1 +1,3 @@
-export const metadata={title:"Kunaris Education & Media | Éducation, création & numérique",description:"Cours de langues, projets numériques, vidéo, image de marque, impression et formation pour les particuliers, entreprises et communautés."}; export default function Layout({children}){return children}
+import { seoMetadata } from "../seo";
+export const metadata = seoMetadata("fr", "", "Apprendre, créer et connecter | Kunaris Education & Media", "Découvrez les cours de langues, les sites web, les applications, la vidéo, l’image de marque, la formation et les projets créatifs de Kunaris au Canada.");
+export default function Layout({children}){return children}

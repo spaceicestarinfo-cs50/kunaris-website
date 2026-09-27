@@ -1,3 +1,5 @@
+import { seoMetadata } from "../seo";
+export const metadata = seoMetadata("en", "/for-business", "Business Services: Branding, Digital & Training | Kunaris Education & Media", "Business Services: Branding, Digital & Training at Kunaris Education & Media. Discover our services and get in touch to discuss your goals.");
 import SiteHeader from "../components/SiteHeader";
 const services = [
   {

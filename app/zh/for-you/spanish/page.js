@@ -1,1 +1,3 @@
+import { seoMetadata } from "../../../seo";
+export const metadata = seoMetadata("zh", "/for-you/spanish", "西班牙语课程 | Kunaris 星初创意", "了解 Kunaris 的西班牙语课程，探索课程、数字创意和相关服务，欢迎联系我们咨询。");
 import SiteHeader from "../../../components/SiteHeader"; export default function Page(){return <main className="languagePage"><SiteHeader active="you" locale="zh"/><section className="languageHero fyShell"><a className="backLink" href="/zh/for-you">← 语言学习</a><p className="eyebrow">西班牙语</p><h1>从开口开始，<br/>一步一步学会沟通。</h1><p>从基础开始，学习旅行和日常生活中真正用得到的西班牙语。</p></section><section className="languageClosing fyShell"><p className="eyebrow">课程安排</p><h2>根据实际需求安排课程。</h2><p>目前不设置固定公开班期。告诉我们你的程度、学习目标和时间，我们会回复目前可安排的课程方式。</p><a href="/zh/contact">咨询西班牙语课程 →</a></section></main>}

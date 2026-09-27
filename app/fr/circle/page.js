@@ -1,1 +1,3 @@
+import { seoMetadata } from "../../seo";
+export const metadata = seoMetadata("fr", "/circle", "Kunaris Circle — Bientôt | Kunaris Education & Media", "Kunaris Circle arrive bientôt.", { noindex: true });
 import SiteHeader from "../../components/SiteHeader"; export default function Page(){return <main className="circlePage"><SiteHeader active="circle" locale="fr"/><section className="circleComing fyShell"><a className="backLink" href="/fr">← Retour à Kunaris</a><div className="circleOrb"><img src="/kunaris-sphere.png" alt=""/></div><p className="eyebrow">KUNARIS CIRCLE</p><h1>Un nouvel espace<br/>prend forme.</h1><p>Apprentissage, expériences, avantages membres et contenus exclusifs : un lieu à découvrir bientôt.</p><span>Bientôt</span></section></main>}

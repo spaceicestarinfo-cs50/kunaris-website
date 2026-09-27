@@ -1,3 +1,5 @@
+import { seoMetadata } from "../../seo";
+export const metadata = seoMetadata("zh", "/for-business", "企业服务：品牌、数字创意与培训 | Kunaris 星初创意", "了解 Kunaris 的企业服务：品牌、数字创意与培训，探索课程、数字创意和相关服务，欢迎联系我们咨询。");
 import SiteHeader from "../../components/SiteHeader";
 const services=[
 {id:"brand-digital",no:"01",label:"品牌与数字服务",title:"把一个想法，变成完整的品牌与数字体验。",text:"从品牌的第一印象到完整的线上呈现，我们帮助企业建立清晰、实用而有辨识度的数字形象。",items:[["Logo设计","品牌标志 · 视觉识别 · 品牌素材"],["网站设计","企业网站 · Landing Page · 在线表单"],["App开发","企业App · 评估工具 · 定制数字方案"],["教育游戏开发","互动学习 · 游戏化体验 · 学习工具"]],cta:"咨询品牌与数字项目",image:"/biz-brand.png"},
