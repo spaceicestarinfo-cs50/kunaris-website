@@ -820,6 +820,30 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
 .smallBusinessGrid article span{position:absolute;top:18px;right:20px;color:#497e71}
 .smallBusinessGrid h3{font-size:20px;margin:12px 0 8px}
 .smallBusinessGrid p{color:#58736d;line-height:1.55;margin:0}
+.smallBusinessGrid article{display:flex;flex-direction:column}
+.sampleArea{margin-top:auto;padding-top:20px}
+.sampleIntro{font-size:11px!important;color:#70877e!important;margin:0 0 9px!important}
+.sampleChoices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.sampleChoices button{border:1px solid #d6e4dc;border-radius:10px;padding:4px;background:#f6f9f5;cursor:pointer;text-align:left;transition:transform .16s,box-shadow .16s}
+.sampleChoices button:hover,.sampleChoices button:focus-visible{transform:translateY(-3px);box-shadow:0 8px 20px #1c4a3d24;outline:2px solid #83b8a4}
+.sampleScreen{position:relative;overflow:hidden;aspect-ratio:3/4;background:#fffdfa;border-radius:6px;color:#1e403a;box-shadow:0 2px 8px #213b3020;font-family:Arial,Helvetica,sans-serif}
+.sampleScreenTop{height:16%;display:flex;align-items:center;gap:4px;padding:0 8%;font-size:clamp(5px,.5vw,8px);font-weight:bold}
+.sampleScreenTop i{width:9px;height:9px;border-radius:50%;background:#85ac9b;flex:none}.sampleScreenTop span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.sampleScreenTop b{margin-left:auto}
+.sampleScreenHero{height:39%;position:relative;overflow:hidden;background:linear-gradient(140deg,#e6ddca,#bcd2bf);display:flex;align-items:flex-end;padding:9%;font-size:clamp(9px,1vw,15px)}
+.sampleScreenHero{background:linear-gradient(140deg,#f7f2e9,var(--sample-accent))}
+.sampleArt{position:absolute;right:12%;top:16%;font-size:clamp(22px,3vw,40px);filter:drop-shadow(1px 3px 3px #31412f32);transform:rotate(-12deg)}
+.sampleScreenHero strong{position:relative;z-index:2;max-width:95%;line-height:1.25}
+.sampleSun{position:absolute;width:47%;aspect-ratio:1;border-radius:50%;background:#f6edcf;right:9%;top:10%;filter:blur(1px)}
+.sampleHill{position:absolute;width:115%;height:62%;border-radius:50% 50% 0 0;background:#89a999;left:-10%;bottom:-40%;transform:rotate(-8deg)}
+.sampleScreen--1{background:#f9f7f2;color:#453d35}.sampleScreen--1 .sampleScreenTop i{background:#caa882}.sampleScreen--1 .sampleScreenHero{background:linear-gradient(135deg,#f9f2e7,var(--sample-accent))}.sampleScreen--1 .sampleHill{background:#bb9984}.sampleScreen--1 .sampleSun{background:#fff7e5}
+.sampleScreenBody{padding:9%;font-size:clamp(6px,.57vw,9px)}.sampleScreenBody small{color:#798c7d;display:block;margin-bottom:7%}.sampleSampleTiles{display:flex;gap:5%;margin-bottom:8%}.sampleSampleTiles span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#edf3e9;padding:10% 5% 23%;border-radius:4px}.sampleScreen--1 .sampleSampleTiles span{background:#f0e8dd}
+.sampleScreenBody em{font-style:normal;display:inline-block;padding:5% 8%;background:#295e51;color:#fff;border-radius:20px}.sampleScreen--1 .sampleScreenBody em{background:#745b48}
+.sampleOverlay{position:fixed;inset:0;z-index:1000;background:#0d221cb8;display:grid;place-items:center;padding:20px}
+.sampleDialog{position:relative;background:#f9fbf8;padding:24px 30px 30px;border-radius:18px;max-height:95vh;max-width:min(460px,100%);width:100%;overflow:auto;box-shadow:0 22px 90px #0006}
+.sampleDialog>p{margin:0 0 14px;font-size:13px;color:#658276}
+.sampleClose{position:absolute;right:18px;top:10px;background:none;border:0;font-size:30px;color:#2c5245;cursor:pointer;z-index:2}
+.sampleScreen--large{width:min(300px,100%);margin:auto;aspect-ratio:3/4}.sampleScreen--large .sampleScreenTop{font-size:11px}.sampleScreen--large .sampleScreenHero{font-size:24px}.sampleScreen--large .sampleScreenBody{font-size:13px}
+.sampleScreen--large .sampleArt{font-size:64px}
 .smallBusinessSteps{padding-bottom:85px}
 .smallBusinessSteps>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:25px 0}
 .smallBusinessSteps>div p{border-top:2px solid #78afa0;padding:20px 6px 5px;line-height:1.6;margin:0}

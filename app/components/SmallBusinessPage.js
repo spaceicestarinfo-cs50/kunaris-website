@@ -1,4 +1,5 @@
 import SiteHeader from "./SiteHeader";
+import SmallBusinessSamples from "./SmallBusinessSamples";
 
 const content = {
   en: {
@@ -105,7 +106,7 @@ export default function SmallBusinessPage({locale="en"}) {
     <section className={`smallBusinessOffer fyShell elegantOffer elegantOffer--${locale}`} aria-label={t.offerLabel}>
       <div className="smallBusinessScroll"><p className="eyebrow">{t.offerLabel}</p><h2>{t.offerTitle}</h2><p>{t.offer}</p><small>{t.offerNote}</small></div>
     </section>
-    <section className="smallBusinessExamples fyShell"><h2>{t.examplesTitle}</h2><p className="smallBusinessExamplesIntro">{t.examplesIntro}</p><div className="smallBusinessGrid">{t.examples.map(([name,detail])=><article key={name}><span aria-hidden="true">✦</span><h3>{name}</h3><p>{detail}</p></article>)}</div></section>
+    <section className="smallBusinessExamples fyShell"><h2>{t.examplesTitle}</h2><p className="smallBusinessExamplesIntro">{t.examplesIntro}</p><div className="smallBusinessGrid">{t.examples.map(([name,detail],index)=><article key={name}><h3>{name}</h3><p>{detail}</p><SmallBusinessSamples locale={locale} index={index}/></article>)}</div></section>
     <section className="smallBusinessSteps fyShell"><h2>{t.stepsTitle}</h2><div>{t.steps.map((step,i)=><p key={step}><b>0{i+1}</b>{step}</p>)}</div><a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a></section>
     <footer className="fyFooter"><div className="fyShell footerInner"><div className="footerBrand"><img src="/kunaris-sphere.png" alt=""/><div><b>Kunaris Education &amp; Media Inc.</b><small>Learn. Create. Connect.</small></div></div><a href={`${prefix}/for-you`}>{t.back}</a></div></footer>
   </main>;
