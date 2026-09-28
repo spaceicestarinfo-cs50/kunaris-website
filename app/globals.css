@@ -827,17 +827,20 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
 @media(max-width:750px){.smallBusinessHero{padding-top:45px;padding-bottom:40px}.smallBusinessOffer{padding:25px}.smallBusinessGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.smallBusinessSteps>div{grid-template-columns:1fr}}
 @media(max-width:510px){.smallBusinessGrid{grid-template-columns:1fr}.smallBusinessLead{font-size:16px}.serviceCard .menuItem{padding-right:40px!important}}
 
-/* Offer presented as an unfurled parchment scroll. */
-.smallBusinessOffer{position:relative;isolation:isolate;overflow:visible;background:linear-gradient(115deg,#f8e9c8,#fff9e9 40%,#f5dfb0);border:1px solid #d4b87e;border-radius:22px;box-shadow:0 20px 38px #614b2619,inset 0 0 0 7px #fff6dc90;padding:34px clamp(36px,6vw,90px)}
-.smallBusinessOffer::before,.smallBusinessOffer::after{content:"";position:absolute;z-index:2;top:-12px;bottom:-12px;width:23px;border-radius:50%;background:linear-gradient(90deg,#aa7941 0%,#d9b376 16%,#f7dba5 48%,#c59153 83%,#8a6138 100%);border:1px solid #b5874b;box-shadow:3px 3px 12px #63432430}
-.smallBusinessOffer::before{left:-12px}.smallBusinessOffer::after{right:-12px;transform:scaleX(-1)}
-.smallBusinessScroll{position:relative;text-align:center;padding:20px 0 24px;border-top:1px solid #b68d544a;border-bottom:1px solid #b68d544a}
-.smallBusinessScroll .scrollFlourish{display:block;color:#a5733d;letter-spacing:.5em;font-size:15px;margin:0 0 15px}
-.smallBusinessScroll .eyebrow{color:#78592f;font-weight:900;letter-spacing:.12em}
-.smallBusinessScroll h2{color:#4a3523;font-size:clamp(32px,4vw,48px);margin:13px 0 18px}
-.smallBusinessScroll>p:not(.eyebrow){font-size:18px;color:#533f2e;line-height:1.75;max-width:800px;margin:0 auto 17px;font-weight:600}
-.smallBusinessScroll small{display:block;color:#665440;max-width:780px;margin:auto;font-size:12px;line-height:1.55}
-@media(max-width:510px){.smallBusinessOffer{padding:21px 29px}.smallBusinessOffer::before,.smallBusinessOffer::after{width:15px;top:-7px;bottom:-7px}.smallBusinessOffer::before{left:-7px}.smallBusinessOffer::after{right:-7px}.smallBusinessScroll>p:not(.eyebrow){font-size:15px}.smallBusinessScroll .eyebrow{font-size:10px}}
+/* An opened bamboo slip: slats, two binding cords and a rolled end. */
+.bambooOffer{position:relative;isolation:isolate;overflow:visible;margin-top:36px;margin-bottom:24px;padding:42px clamp(44px,7vw,94px) 48px;border:0;border-radius:13px 26px 26px 13px;background:repeating-linear-gradient(90deg,#ac7943 0,#ddb779 3px,#f1d49b 11px,#e4bd81 25px,#c09157 32px,#91643d 35px,#704b2f 37px,#d6ac73 40px);box-shadow:0 22px 36px #40301938,0 5px 5px #4a301722,inset 0 5px 8px #f8e5bc88,inset 0 -8px 10px #62432677;transform:perspective(1200px) rotateX(1deg)}
+.bambooOffer::before,.bambooOffer::after{content:"";position:absolute;pointer-events:none}
+.bambooOffer::before{z-index:2;inset:0;border-radius:inherit;background:linear-gradient(180deg,transparent 0%,transparent 10%,#533325bb 10.3%,#986946e6 11%,#513120bb 11.7%,transparent 12.2%,transparent 87%,#553523bb 87.4%,#946344e6 88%,#50311fbb 88.7%,transparent 89%),linear-gradient(90deg,#57391f55,transparent 7%,transparent 89%,#50311f66);box-shadow:inset 0 0 0 1px #74492277}
+.bambooOffer::after{z-index:3;top:-18px;right:-25px;bottom:-18px;width:60px;border-radius:48% 50% 50% 48%;background:radial-gradient(ellipse at 55% 49%,#493223 0 7%,#ca985b 9% 13%,#66432b 15% 19%,#d6ab6e 21% 28%,#765032 30% 33%,#e1b67a 35% 41%,#64422a 43% 46%,#cca06a 48% 58%,#6b462d 62%,#b8824e 75%,#4b311f 98%);border:2px solid #855a36;box-shadow:9px 12px 16px #432b2080,inset -7px 0 9px #39251a88}
+.bambooOffer .smallBusinessScroll{position:relative;z-index:1;text-align:center;padding:33px clamp(14px,3vw,46px) 40px;border:1px solid #5b3d2855;border-radius:10px;background:linear-gradient(180deg,#fff4d7ed,#f9e8c1f0);box-shadow:0 6px 17px #5b381b45,inset 0 0 0 4px #fff9e964}
+.bambooOffer .eyebrow{font:700 clamp(12px,1.3vw,16px)/1.6 Georgia,serif;letter-spacing:.17em;color:#775130;margin:0 auto 9px}
+.bambooOffer h2{font:500 clamp(37px,4.2vw,57px)/1.18 Georgia,serif;letter-spacing:.015em;color:#443021;margin:0 0 18px}
+.bambooOffer .smallBusinessScroll>p:not(.eyebrow){font:500 clamp(16px,1.7vw,20px)/1.8 Georgia,serif;color:#4b3727;max-width:820px;margin:0 auto 16px}
+.bambooOffer .smallBusinessScroll small{display:block;font:400 13px/1.7 Georgia,serif;color:#68513b;max-width:760px;margin:auto}
+.bambooOffer--zh .eyebrow,.bambooOffer--zh h2,.bambooOffer--zh .smallBusinessScroll>p:not(.eyebrow),.bambooOffer--zh .smallBusinessScroll small{font-family:"Kaiti SC","STKaiti","KaiTi","BiauKai","Songti SC","Noto Serif CJK SC",serif}
+.bambooOffer--zh h2{font-weight:500;letter-spacing:.1em}
+@media(max-width:750px){.bambooOffer{padding:34px 36px 40px;margin-right:37px}.bambooOffer::after{right:-19px;width:46px}.bambooOffer .smallBusinessScroll{padding:29px 19px 34px}}
+@media(max-width:510px){.bambooOffer{padding:27px 21px 31px;margin-right:31px;margin-left:16px}.bambooOffer::after{right:-16px;width:36px;top:-10px;bottom:-10px}.bambooOffer .smallBusinessScroll{padding:25px 13px 29px}.bambooOffer h2{font-size:clamp(31px,8vw,43px)}.bambooOffer .smallBusinessScroll>p:not(.eyebrow){font-size:15px}.bambooOffer .smallBusinessScroll small{font-size:11px}}
 
 .experienceSection{background:#edf5f0;padding:70px 0 76px;border-block:1px solid #d7e8df}
 .experienceSection h2{font:600 clamp(29px,3vw,43px)/1.14 Georgia,serif;margin:9px 0 15px}

@@ -102,8 +102,8 @@ export default function SmallBusinessPage({locale="en"}) {
       <p className="eyebrow">{t.eyebrow}</p><h1>{t.title}</h1><p className="smallBusinessLead">{t.lead}</p>
       <a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a>
     </section>
-    <section className="smallBusinessOffer fyShell" aria-label={t.offerLabel}>
-      <div className="smallBusinessScroll"><span className="scrollFlourish" aria-hidden="true">✦　✦　✦</span><p className="eyebrow">{t.offerLabel}</p><h2>{t.offerTitle}</h2><p>{t.offer}</p><small>{t.offerNote}</small></div>
+    <section className={`smallBusinessOffer fyShell bambooOffer bambooOffer--${locale}`} aria-label={t.offerLabel}>
+      <div className="smallBusinessScroll"><p className="eyebrow">{t.offerLabel}</p><h2>{t.offerTitle}</h2><p>{t.offer}</p><small>{t.offerNote}</small></div>
     </section>
     <section className="smallBusinessExamples fyShell"><h2>{t.examplesTitle}</h2><p className="smallBusinessExamplesIntro">{t.examplesIntro}</p><div className="smallBusinessGrid">{t.examples.map(([name,detail])=><article key={name}><span aria-hidden="true">✦</span><h3>{name}</h3><p>{detail}</p></article>)}</div></section>
     <section className="smallBusinessSteps fyShell"><h2>{t.stepsTitle}</h2><div>{t.steps.map((step,i)=><p key={step}><b>0{i+1}</b>{step}</p>)}</div><a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a></section>
