@@ -58,6 +58,15 @@ export default function ForYouPage() {
           </div>}
         </article>
 
+        <article id="small-business" className={"accordion "+(open==="small-business"?"expanded":"")}>
+          <button className="accordionHead" onClick={()=>toggle("small-business")} aria-expanded={open==="small-business"}>
+            <span className="choiceNo">04</span>
+            <span className="choiceText"><b>Tools for Your Small Business</b><small>Simple websites, booking pages and ordering apps for independent businesses.</small></span>
+            <Arrow open={open==="small-business"}/>
+          </button>
+          {open==="small-business" && <div className="accordionBody"><p className="chooseHint">For home cooks, hairstylists, nail artists and other independent providers. See practical examples and tell us what your customers need.</p><a className="smallBusinessDiscover" href="/for-you/small-business">Explore small business tools <span aria-hidden="true">→</span></a></div>}
+        </article>
+
         <article className={"accordion journeyAccordion "+(open==="journey"?"expanded":"")}>
           <button className="accordionHead" onClick={()=>toggle("journey")} aria-expanded={open==="journey"}>
             <span className="choiceNo">03</span>
@@ -70,14 +79,7 @@ export default function ForYouPage() {
             <a href="/for-you/journey#live"><b>Build a Life</b><small>Plan your future</small><span>→</span></a>
           </div>}
         </article>
-        <article id="small-business" className={"accordion "+(open==="small-business"?"expanded":"")}>
-          <button className="accordionHead" onClick={()=>toggle("small-business")} aria-expanded={open==="small-business"}>
-            <span className="choiceNo">04</span>
-            <span className="choiceText"><b>Tools for Your Small Business</b><small>Simple websites, booking pages and ordering apps for independent businesses.</small></span>
-            <Arrow open={open==="small-business"}/>
-          </button>
-          {open==="small-business" && <div className="accordionBody"><p className="chooseHint">For home cooks, hairstylists and other independent service providers: tell us what customers need to see, book or order.</p><div className="languageOptions threeOptions"><a href="/contact"><b>Menu &amp; orders</b><span>→</span></a><a href="/contact"><b>Booking page</b><span>→</span></a><a href="/contact"><b>Simple website</b><span>→</span></a></div></div>}
-        </article>
+
       </section>
 
       <section id="journey" className="journeyBackdrop">

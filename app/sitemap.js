@@ -1,6 +1,6 @@
 import { siteUrl } from "./seo";
 
-const paths = ["", "/about", "/contact", "/for-business", "/for-you", "/for-you/french", "/for-you/english", "/for-you/spanish", "/for-you/cantonese", "/for-you/classes-activities", "/for-you/journey", "/projects", "/privacy", "/terms"];
+const paths = ["", "/about", "/contact", "/for-business", "/for-you", "/for-you/french", "/for-you/english", "/for-you/spanish", "/for-you/cantonese", "/for-you/classes-activities", "/for-you/journey", "/for-you/small-business", "/projects", "/privacy", "/terms"];
 
 export default function sitemap() {
   return paths.flatMap((path) => ["en", "fr", "zh"].map((locale) => ({

@@ -790,6 +790,68 @@ footer .footerBrand b{width:300px!important;text-align:center!important}
 .serviceCard .items{gap:2px}
 .serviceCard .cardCta{font-size:14px!important;padding-top:18px}
 
+/* Make each service row and the next-page action unmistakably clickable. */
+.serviceCard .menuItem{position:relative;padding-right:42px!important;min-height:68px}
+.serviceCard .menuItem .menuArrow{display:none!important}
+.serviceCard .menuItem::after{content:"→";position:absolute;right:2px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#d6ebe2;border:1px solid #76a69a;color:#154c42;font:700 20px/1 Arial,sans-serif;transition:transform .18s,background .18s}
+.serviceCard .menuItem:hover::after,.serviceCard .menuItem:focus-visible::after{transform:translate(4px,-50%);background:#b7dfd0}
+.serviceCard .menuItem:focus-visible,.serviceCard .cardCta:focus-visible,.smallBusinessDiscover:focus-visible{outline:2px solid #215b51;outline-offset:3px}
+.serviceCard .cardCta{align-self:flex-start;align-items:center;gap:10px;border-bottom:1px solid #397f78;padding-bottom:5px}
+.serviceCard .cardCta::after{content:"→";font-size:23px;line-height:1}
+.bizOverview .bizTreasureCard .bizTreasureLabel i{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:#d6ebe2;color:#154c42;font-size:21px;font-style:normal}
+.bizOverview .bizTreasureCard:hover .bizTreasureLabel i{background:#b7dfd0}
+.smallBusinessDiscover{display:inline-flex;align-items:center;gap:12px;background:#20584d;color:white!important;border-radius:999px;padding:12px 19px;font-weight:800;text-decoration:none}
+.smallBusinessDiscover span{font-size:20px}
+
+.smallBusinessPage{background:#f8fbf7}
+.smallBusinessHero{padding-top:82px;padding-bottom:70px}
+.smallBusinessHero h1{font:600 clamp(38px,5vw,64px)/1.1 Georgia,serif;max-width:850px;margin:12px 0 20px}
+.smallBusinessLead{font-size:18px;line-height:1.65;color:#4f7067;max-width:730px;margin:0 0 26px}
+.smallBusinessButton{display:inline-flex;align-items:center;background:#20584d;color:#fff!important;border-radius:999px;padding:14px 22px;text-decoration:none;font-weight:800;transition:transform .18s,background .18s}
+.smallBusinessButton:hover{transform:translateY(-2px);background:#164539}
+.smallBusinessOffer{padding:35px 40px;background:#e3f1e8;border:1px solid #9fcbbb;border-radius:24px}
+.smallBusinessOffer h2,.smallBusinessExamples h2,.smallBusinessSteps h2{font:600 clamp(28px,3vw,39px)/1.15 Georgia,serif;margin:8px 0 16px}
+.smallBusinessOffer>p:not(.eyebrow){font-size:17px;line-height:1.7;max-width:850px;margin:0 0 14px}
+.smallBusinessOffer small{display:block;color:#49675e;line-height:1.55}
+.smallBusinessExamples{padding-top:82px;padding-bottom:76px}
+.smallBusinessExamplesIntro{max-width:760px;color:#58736d;font-size:16px;line-height:1.7;margin:0 0 25px}
+.smallBusinessGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.smallBusinessGrid article{position:relative;background:#fff;border:1px solid #d7e8df;border-radius:20px;padding:29px 22px;min-height:160px}
+.smallBusinessGrid article span{position:absolute;top:18px;right:20px;color:#497e71}
+.smallBusinessGrid h3{font-size:20px;margin:12px 0 8px}
+.smallBusinessGrid p{color:#58736d;line-height:1.55;margin:0}
+.smallBusinessSteps{padding-bottom:85px}
+.smallBusinessSteps>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:25px 0}
+.smallBusinessSteps>div p{border-top:2px solid #78afa0;padding:20px 6px 5px;line-height:1.6;margin:0}
+.smallBusinessSteps>div b{display:block;color:#648e82;margin-bottom:8px}
+@media(max-width:750px){.smallBusinessHero{padding-top:45px;padding-bottom:40px}.smallBusinessOffer{padding:25px}.smallBusinessGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.smallBusinessSteps>div{grid-template-columns:1fr}}
+@media(max-width:510px){.smallBusinessGrid{grid-template-columns:1fr}.smallBusinessLead{font-size:16px}.serviceCard .menuItem{padding-right:40px!important}}
+
+/* Offer presented as an unfurled parchment scroll. */
+.smallBusinessOffer{position:relative;isolation:isolate;overflow:visible;background:linear-gradient(115deg,#f8e9c8,#fff9e9 40%,#f5dfb0);border:1px solid #d4b87e;border-radius:22px;box-shadow:0 20px 38px #614b2619,inset 0 0 0 7px #fff6dc90;padding:34px clamp(36px,6vw,90px)}
+.smallBusinessOffer::before,.smallBusinessOffer::after{content:"";position:absolute;z-index:2;top:-12px;bottom:-12px;width:23px;border-radius:50%;background:linear-gradient(90deg,#aa7941 0%,#d9b376 16%,#f7dba5 48%,#c59153 83%,#8a6138 100%);border:1px solid #b5874b;box-shadow:3px 3px 12px #63432430}
+.smallBusinessOffer::before{left:-12px}.smallBusinessOffer::after{right:-12px;transform:scaleX(-1)}
+.smallBusinessScroll{position:relative;text-align:center;padding:20px 0 24px;border-top:1px solid #b68d544a;border-bottom:1px solid #b68d544a}
+.smallBusinessScroll .scrollFlourish{display:block;color:#a5733d;letter-spacing:.5em;font-size:15px;margin:0 0 15px}
+.smallBusinessScroll .eyebrow{color:#78592f;font-weight:900;letter-spacing:.12em}
+.smallBusinessScroll h2{color:#4a3523;font-size:clamp(32px,4vw,48px);margin:13px 0 18px}
+.smallBusinessScroll>p:not(.eyebrow){font-size:18px;color:#533f2e;line-height:1.75;max-width:800px;margin:0 auto 17px;font-weight:600}
+.smallBusinessScroll small{display:block;color:#665440;max-width:780px;margin:auto;font-size:12px;line-height:1.55}
+@media(max-width:510px){.smallBusinessOffer{padding:21px 29px}.smallBusinessOffer::before,.smallBusinessOffer::after{width:15px;top:-7px;bottom:-7px}.smallBusinessOffer::before{left:-7px}.smallBusinessOffer::after{right:-7px}.smallBusinessScroll>p:not(.eyebrow){font-size:15px}.smallBusinessScroll .eyebrow{font-size:10px}}
+
+.experienceSection{background:#edf5f0;padding:70px 0 76px;border-block:1px solid #d7e8df}
+.experienceSection h2{font:600 clamp(29px,3vw,43px)/1.14 Georgia,serif;margin:9px 0 15px}
+.experienceIntro{max-width:790px;color:#526e67;font-size:16px;line-height:1.65;margin:0 0 26px}
+.experienceCards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.experienceCards article{background:#fbfdf9;border:1px solid #d4e4db;border-radius:20px;padding:29px;display:flex;flex-direction:column;gap:10px}
+.experienceCards .experienceType{color:#397f78;font-size:11px;font-weight:850;letter-spacing:.09em;text-transform:uppercase;margin:0}
+.experienceCards h3{font-size:24px;margin:0;color:#173f38}
+.experienceCards article>p:not(.experienceType){line-height:1.7;color:#526e67;margin:0}
+.experienceTags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:14px}
+.experienceTags span{border-radius:999px;background:#e2eee6;padding:8px 11px;color:#335f55;font-size:11px;font-weight:750}
+.experienceNote{font-size:11px;color:#667c74;line-height:1.5;margin:17px 0 0}
+@media(max-width:700px){.experienceCards{grid-template-columns:1fr}.experienceSection{padding:48px 0}.experienceCards article{padding:22px}}
+
 /* Top-level business categories are discovery objects, not duplicates of the detailed service cards. */
 .bizOverview{gap:16px;padding-bottom:76px}
 .bizOverview .bizTreasureCard{min-height:315px;padding:16px 16px 17px;display:flex;flex-direction:column;position:relative;overflow:hidden;border-radius:24px;background:#f4f7f2;border:1px solid #173f3819;box-shadow:0 10px 28px #173f3808}

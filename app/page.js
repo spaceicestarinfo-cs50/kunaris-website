@@ -1,5 +1,6 @@
 "use client";
 import SiteHeader from "./components/SiteHeader";
+import ExperienceSection from "./components/ExperienceSection";
 
 
 const Arrow=()=> <span className="menuArrow" aria-hidden="true">→</span>;
@@ -30,8 +31,8 @@ export default function Home(){
    <div className="items">
     <a className="menuItem" href="/for-you"><span className="menuIcon">◇</span><span><strong>Learn a language</strong><small>French · English · Spanish · Cantonese</small></span></a>
     <Item icon="▱" title="Classes & Activities" sub="Workshops · Interest Classes · Interactive Learning" href="/for-you/classes-activities"/>
+    <Item icon="▣" title="Tools for Your Small Business" sub="Menus · Orders · Booking · Simple Websites" href="/for-you/small-business"/>
     <Item icon="◎" title="Your Journey in Canada" sub="Study · Work · Build a Life" href="/for-you/journey"/>
-    <Item icon="▣" title="Tools for Your Small Business" sub="Menus · Orders · Booking · Simple Websites" href="/for-you#small-business"/>
    </div>
    <a className="cardCta" href="/for-you">Explore for You</a>
   </div>
@@ -53,6 +54,8 @@ export default function Home(){
  </article>
 </section>
 </div>
+
+<ExperienceSection locale="en"/>
 
 <section id="about" className="storyFinal">
   <img
