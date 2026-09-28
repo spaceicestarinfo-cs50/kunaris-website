@@ -8,8 +8,8 @@ const content = {
     lead: "You work for yourself. Get an affordable, practical website, booking page or ordering tool that helps customers understand your services and contact you.",
     offerLabel: "EARLY PARTNER OFFER · LIMITED PILOT SPOTS",
     offerTitle: "Build and try it for free.",
-    offer: "For selected early partners: free development and testing of a simple personal website, ordering page or booking tool, followed by 3 months of free use from launch. Then $9.99/month for ongoing hosting and maintenance. No long-term commitment; stop anytime.",
-    offerNote: "We confirm the features and start date together before work begins. Larger custom projects are quoted separately.",
+    offer: "For selected early partners: free development and testing of a simple personal website, ordering page or booking tool, followed by 3 months of free use from launch. After that, continue at a special low monthly rate for hosting and maintenance. No long-term commitment; stop anytime.",
+    offerNote: "We confirm the features, start date and monthly fee with you before work begins. Larger custom projects are quoted separately.",
     examplesTitle: "Does this sound like your work?",
     examplesIntro: "If you answer the same questions in messages every day, a simple page can show the details and collect requests in one place.",
     examples: [
@@ -38,8 +38,8 @@ const content = {
     lead: "Vous travaillez à votre compte ? Un site vitrine abordable, une page de réservation ou de commande aide vos clients à comprendre vos services et à vous contacter.",
     offerLabel: "OFFRE PARTENAIRES DE DÉPART · PLACES PILOTES LIMITÉES",
     offerTitle: "Création et essai gratuits.",
-    offer: "Pour certains partenaires de départ : création et tests gratuits d’un petit site vitrine, d’une page de commande ou d’un outil de réservation, puis 3 mois d’utilisation gratuite à compter du lancement. Ensuite, 9,99 $/mois pour l’hébergement et la maintenance. Aucun engagement à long terme : arrêtez quand vous voulez.",
-    offerNote: "Nous convenons des fonctionnalités et de la date de départ avant de commencer. Les projets sur mesure plus importants font l’objet d’un devis distinct.",
+    offer: "Pour certains partenaires de départ : création et tests gratuits d’un petit site vitrine, d’une page de commande ou d’un outil de réservation, puis 3 mois d’utilisation gratuite à compter du lancement. Ensuite, poursuivez à un tarif mensuel promotionnel pour l’hébergement et la maintenance. Aucun engagement à long terme : arrêtez quand vous voulez.",
+    offerNote: "Nous confirmons les fonctionnalités, la date de départ et les frais mensuels avant de commencer. Les projets sur mesure plus importants font l’objet d’un devis distinct.",
     examplesTitle: "Vous vous reconnaissez ?",
     examplesIntro: "Si vous répondez chaque jour aux mêmes questions par message, une page simple peut présenter les détails et réunir les demandes au même endroit.",
     examples: [
@@ -68,8 +68,8 @@ const content = {
     lead: "一个人做生意，也能有负担得起的小网站。我们帮你制作简单实用的个人展示页、菜单接单页或预约工具，让客人更容易了解服务、提交需求。",
     offerLabel: "早期合作伙伴计划 · 试点名额有限",
     offerTitle: "免费开发，免费试用。",
-    offer: "符合试点范围的早期合作伙伴：简易个人网站、接单页或预约工具免费开发与测试；上线后免费使用 3 个月。之后每月 $9.99，用于持续托管和维护。不绑长期合约，随时可以停止。",
-    offerNote: "开始前会一起确认功能范围和试用起算日期。较复杂的定制需求另行报价。",
+    offer: "符合试点范围的早期合作伙伴：简易个人网站、接单页或预约工具免费开发与测试；上线后免费使用 3 个月。试用后享超优惠月费，包含持续托管和维护。不绑长期合约，随时可以停止。",
+    offerNote: "开始前会一起确认功能范围、试用起算日期和后续月费。较复杂的定制需求另行报价。",
     examplesTitle: "看看有没有你正在做的生意？",
     examplesIntro: "如果你每天都在私信里重复介绍价格、时间、地址和怎么下单，做一个简单页面就能让客人先看清信息，再集中提交需求。",
     examples: [

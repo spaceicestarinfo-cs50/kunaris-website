@@ -1728,3 +1728,21 @@ footer .footerBrand>span,
   .footerContactRow{align-items:flex-start!important;}
   .footerContactRow:not(:last-child)::after{display:none!important;}
 }
+
+/* Chinese site: softer brush shaped forms and calmer weight throughout. */
+.zhPage{
+  --zh-display:"LXGW WenKai","霞鹜文楷","Kaiti SC","STKaiti","KaiTi","BiauKai","Songti SC","SimSun",serif;
+  --zh-reading:"LXGW WenKai","霞鹜文楷","Kaiti SC","STKaiti","KaiTi","BiauKai","Songti SC","SimSun",serif;
+  --zh-serif:var(--zh-display);
+  --zh-sans:var(--zh-reading);
+  font-family:var(--zh-reading);
+}
+.zhPage :is(h1,h2,h3,h4){font-family:var(--zh-display)!important;font-weight:500!important;letter-spacing:.055em}
+.zhPage :is(p,small,li,label,button,a,span,strong,b,input,textarea){font-family:var(--zh-reading)}
+.zhPage :is(p,li){line-height:1.8}
+.zhPage :is(.siteNav,.menuItem strong,.cardContent h2,.smallBusinessGrid h3,.smallBusinessButton){font-weight:550!important}
+.zhPage .smallBusinessHero h1{line-height:1.32;letter-spacing:.07em}
+.zhPage .elegantOffer :is(h2,p,small),.zhPage .elegantOffer .eyebrow{font-family:var(--zh-display);font-weight:400}
+.zhPage .elegantOffer h2{letter-spacing:.12em}
+.zhPage .smallBusinessGrid h3{line-height:1.45}
+.zhPage .legalDoc h1,.zhPage .legalDoc h2{font-family:var(--zh-display)!important}
