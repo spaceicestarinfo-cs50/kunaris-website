@@ -102,7 +102,7 @@ export default function SmallBusinessPage({locale="en"}) {
       <p className="eyebrow">{t.eyebrow}</p><h1>{t.title}</h1><p className="smallBusinessLead">{t.lead}</p>
       <a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a>
     </section>
-    <section className={`smallBusinessOffer fyShell bambooOffer bambooOffer--${locale}`} aria-label={t.offerLabel}>
+    <section className={`smallBusinessOffer fyShell elegantOffer elegantOffer--${locale}`} aria-label={t.offerLabel}>
       <div className="smallBusinessScroll"><p className="eyebrow">{t.offerLabel}</p><h2>{t.offerTitle}</h2><p>{t.offer}</p><small>{t.offerNote}</small></div>
     </section>
     <section className="smallBusinessExamples fyShell"><h2>{t.examplesTitle}</h2><p className="smallBusinessExamplesIntro">{t.examplesIntro}</p><div className="smallBusinessGrid">{t.examples.map(([name,detail])=><article key={name}><span aria-hidden="true">✦</span><h3>{name}</h3><p>{detail}</p></article>)}</div></section>
