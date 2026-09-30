@@ -1,5 +1,6 @@
 import SiteHeader from "./SiteHeader";
 import {content} from "./SmallBusinessPage";
+import CookPhoneSamples from "./CookPhoneSamples";
 
 // Two task-specific interface concepts per industry. They are illustrations, not deployed apps.
 const designs=[
@@ -48,5 +49,5 @@ export default function BusinessCategoryPage({locale="en",id}){
   const index=Number(id)-1;
   if(!Number.isInteger(index)||index<0||index>=designs.length)return null;
   const design=designs[index], t=ui[locale], [name,description]=content[locale].examples[index], prefix=locale==="en"?"":`/${locale}`;
-  return <main className="forYouPage industryPage"><SiteHeader active="you" locale={locale}/><div className="fyShell industryDetail"><a className="backLink" href={`${prefix}/for-you/small-business`}>{t.back}</a><p className="eyebrow">{t.label} / {String(index+1).padStart(2,"0")}</p><h1>{name}</h1><p className="industryDescription">{description}</p><p className="industryIntro">{t.intro}</p><div className="industryExamples">{[0,1].map(variant=><section key={variant} className="industryExample"><div className="industryExampleTitle"><span>{variant?"02":"01"}</span><h2>{variant?t.two:t.one}</h2><small>{t.sample}</small></div><Preview design={design} locale={locale} variant={variant} labels={t} index={index}/></section>)}</div><p className="industryNote">{t.note}</p><a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a></div></main>;
+  return <main className="forYouPage industryPage"><SiteHeader active="you" locale={locale}/><div className="fyShell industryDetail"><a className="backLink" href={`${prefix}/for-you/small-business`}>{t.back}</a><p className="eyebrow">{t.label} / {String(index+1).padStart(2,"0")}</p><h1>{name}</h1><p className="industryDescription">{description}</p>{index===0?<CookPhoneSamples locale={locale}/>:<><p className="industryIntro">{t.intro}</p><div className="industryExamples">{[0,1].map(variant=><section key={variant} className="industryExample"><div className="industryExampleTitle"><span>{variant?"02":"01"}</span><h2>{variant?t.two:t.one}</h2><small>{t.sample}</small></div><Preview design={design} locale={locale} variant={variant} labels={t} index={index}/></section>)}</div><p className="industryNote">{t.note}</p></>}<a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a></div></main>;
 }
