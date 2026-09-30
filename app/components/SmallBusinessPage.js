@@ -1,18 +1,19 @@
 import SiteHeader from "./SiteHeader";
+import BusinessAppTeaser from "./BusinessAppTeaser";
 
 export const content = {
   en: {
-    eyebrow: "TOOLS FOR YOUR SMALL BUSINESS",
-    title: "A simple way to take your next order.",
-    lead: "You work for yourself. Get an affordable, practical website, booking page or ordering tool that helps customers understand your services and contact you.",
+    eyebrow: "APPS FOR YOUR SMALL BUSINESS",
+    title: "An app for your small business.",
+    lead: "Take orders, receive appointment requests or showcase your work. Explore app examples built around the way your business works.",
     offerLabel: "EARLY PARTNER OFFER · LIMITED PILOT SPOTS",
     offerTitle: "Build and try it for free.",
     offer: "For selected early partners: free development and testing of a simple personal website, ordering page or booking tool, followed by 3 months of free use from launch. After that, continue at a special low monthly rate for hosting and maintenance. No long-term commitment; stop anytime.",
     offerNote: "We confirm the features, start date and monthly fee with you before work begins. Larger custom projects are quoted separately.",
-    examplesTitle: "Does this sound like your work?",
-    examplesIntro: "If you answer the same questions in messages every day, a simple page can show the details and collect requests in one place.",
+    examplesTitle: "Find an app for your business.",
+    examplesIntro: "Choose your business to see what the app could look like on a customer’s phone.",
     examples: [
-      ["Home cooks", "Customers keep asking what is available this week? Show the menu, pickup dates and quantities on one ordering page."],
+      ["Home kitchen", "Customers keep asking what is available this week? Show the menu, pickup dates and quantities on one ordering page."],
       ["Home bakers", "Collect cake sizes, flavours, pickup dates and special requests in one form instead of a long message thread."],
       ["Hairstylists", "Display services and typical durations so clients can request a time without asking for the price list again."],
       ["Nail artists", "Show designs, services and available times; receive clear appointment requests."],
@@ -32,15 +33,15 @@ export const content = {
     back: "Back to For You ↑",
   },
   fr: {
-    eyebrow: "OUTILS POUR VOTRE PETITE ACTIVITÉ",
-    title: "Une façon simple de recevoir votre prochaine commande.",
-    lead: "Vous travaillez à votre compte ? Un site vitrine abordable, une page de réservation ou de commande aide vos clients à comprendre vos services et à vous contacter.",
+    eyebrow: "APPLIS POUR VOTRE PETITE ACTIVITÉ",
+    title: "Une appli pour votre petite activité.",
+    lead: "Recevez des commandes, des demandes de rendez-vous ou présentez vos réalisations. Découvrez des exemples adaptés à votre activité.",
     offerLabel: "OFFRE PARTENAIRES DE DÉPART · PLACES PILOTES LIMITÉES",
     offerTitle: "Création et essai gratuits.",
     offer: "Pour certains partenaires de départ : création et tests gratuits d’un petit site vitrine, d’une page de commande ou d’un outil de réservation, puis 3 mois d’utilisation gratuite à compter du lancement. Ensuite, poursuivez à un tarif mensuel promotionnel pour l’hébergement et la maintenance. Aucun engagement à long terme : arrêtez quand vous voulez.",
     offerNote: "Nous confirmons les fonctionnalités, la date de départ et les frais mensuels avant de commencer. Les projets sur mesure plus importants font l’objet d’un devis distinct.",
-    examplesTitle: "Vous vous reconnaissez ?",
-    examplesIntro: "Si vous répondez chaque jour aux mêmes questions par message, une page simple peut présenter les détails et réunir les demandes au même endroit.",
+    examplesTitle: "Trouvez une appli pour votre activité.",
+    examplesIntro: "Choisissez votre activité pour voir l’appli telle qu’elle apparaîtrait sur le téléphone d’un client.",
     examples: [
       ["Cuisine à domicile", "On vous demande sans cesse le menu de la semaine ? Regroupez plats, dates de retrait et quantités sur une page."],
       ["Pâtisserie à domicile", "Recueillez le format, la saveur, la date de retrait et les demandes particulières dans un formulaire."],
@@ -62,17 +63,17 @@ export const content = {
     back: "Retour à Pour vous ↑",
   },
   zh: {
-    eyebrow: "小生意接单与预约",
-    title: "让下一笔订单，更容易来到你面前。",
-    lead: "一个人做生意，也能有负担得起的小网站。我们帮你制作简单实用的个人展示页、菜单接单页或预约工具，让客人更容易了解服务、提交需求。",
+    eyebrow: "为你的小生意制作 App",
+    title: "你的小生意，也可以有自己的 App。",
+    lead: "菜单接单、服务预约、作品展示——看看适合你生意的 App，让客人自己看、自己选，少一点来回沟通。",
     offerLabel: "早期合作伙伴计划 · 试点名额有限",
     offerTitle: "免费开发，免费试用。",
     offer: "符合试点范围的早期合作伙伴：简易个人网站、接单页或预约工具免费开发与测试；上线后免费使用 3 个月。试用后享超优惠月费，包含持续托管和维护。不绑长期合约，随时可以停止。",
     offerNote: "开始前会一起确认功能范围、试用起算日期和后续月费。较复杂的定制需求另行报价。",
-    examplesTitle: "看看有没有你正在做的生意？",
-    examplesIntro: "如果你每天都在私信里重复介绍价格、时间、地址和怎么下单，做一个简单页面就能让客人先看清信息，再集中提交需求。",
+    examplesTitle: "看看适合你的 App。",
+    examplesIntro: "找到你的行业，点击手机预览，看看客人实际会怎样使用。",
     examples: [
-      ["私厨", "客人总在问本周做什么？把菜单、出餐日期、取餐时段和数量放在一个接单页面。"],
+      ["私厨／家庭厨房", "客人总在问本周做什么？把菜单、出餐日期、取餐时段和数量放在一个接单页面。"],
       ["家庭烘焙", "蛋糕大小、口味、取餐日期、祝福语，让客人一次填清楚，少来回确认。"],
       ["理发师", "展示剪发、染发等服务和预计时长，让客人直接提交想预约的时间。"],
       ["美甲师", "展示款式和服务，让客人选择时间并提交需求，再由你确认预约。"],
@@ -96,17 +97,21 @@ export const content = {
 export default function SmallBusinessPage({locale="en"}) {
   const t=content[locale];
   const prefix=locale==="en"?"":`/${locale}`;
-  return <main className="forYouPage smallBusinessPage">
+  const browse=locale==="zh"?"看看 App 示例 ↓":locale==="fr"?"Voir les exemples d’applis ↓":"Explore app examples ↓";
+  const other=locale==="zh"?"没有找到你的生意？":locale==="fr"?"Votre activité n’est pas dans la liste ?":"Can’t find your business?";
+  const idea=locale==="zh"?"告诉我们你的想法 →":locale==="fr"?"Parlez-nous de votre idée →":"Tell us your idea →";
+  return <main className="forYouPage smallBusinessPage smallBusinessAppCatalog">
     <SiteHeader active="you" locale={locale}/>
     <section className="smallBusinessHero fyShell">
       <p className="eyebrow">{t.eyebrow}</p><h1>{t.title}</h1><p className="smallBusinessLead">{t.lead}</p>
-      <a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a>
+      <a className="smallBusinessButton" href="#business-apps">{browse}</a>
     </section>
+    <section id="business-apps" className="smallBusinessExamples fyShell"><h2>{t.examplesTitle}</h2><p className="smallBusinessExamplesIntro">{t.examplesIntro}</p><div className="smallBusinessGrid">{t.examples.slice(0,-1).map(([name,detail],index)=><a className="smallBusinessCategory" href={`${prefix}/for-you/small-business/${index+1}`} key={name}><h3>{name}</h3><BusinessAppTeaser locale={locale} index={index}/><p>{detail}</p><span className="smallBusinessCategoryCta">{locale==="zh"?"查看 App 示例":locale==="fr"?"Voir l’appli":"View app sample"}<b aria-hidden="true">↗</b></span></a>)}</div></section>
     <section className={`smallBusinessOffer fyShell elegantOffer elegantOffer--${locale}`} aria-label={t.offerLabel}>
       <div className="smallBusinessScroll"><p className="eyebrow">{t.offerLabel}</p><h2>{t.offerTitle}</h2><p>{t.offer}</p><small>{t.offerNote}</small></div>
     </section>
-    <section className="smallBusinessExamples fyShell"><h2>{t.examplesTitle}</h2><p className="smallBusinessExamplesIntro">{t.examplesIntro}</p><div className="smallBusinessGrid">{t.examples.map(([name,detail],index)=><a className="smallBusinessCategory" href={`${prefix}/for-you/small-business/${index+1}`} key={name}><h3>{name}</h3><p>{detail}</p><span className="smallBusinessCategoryCta">{locale==="zh"?"查看适合我的页面示例":locale==="fr"?"Voir les exemples de pages":"See page examples"}<b aria-hidden="true">↗</b></span></a>)}</div></section>
-    <section className="smallBusinessSteps fyShell"><h2>{t.stepsTitle}</h2><div>{t.steps.map((step,i)=><p key={step}><b>0{i+1}</b>{step}</p>)}</div><a className="smallBusinessButton" href={`${prefix}/contact`}>{t.cta}</a></section>
+    <section className="smallBusinessSteps fyShell"><h2>{t.stepsTitle}</h2><div>{t.steps.map((step,i)=><p key={step}><b>0{i+1}</b>{step}</p>)}</div></section>
+    <section className="smallBusinessOther fyShell"><div><h2>{other}</h2><p>{t.examples.at(-1)[1]}</p></div><a className="smallBusinessButton" href={`${prefix}/contact`}>{idea}</a></section>
     <footer className="fyFooter"><div className="fyShell footerInner"><div className="footerBrand"><img src="/kunaris-sphere.png" alt=""/><div><b>Kunaris Education &amp; Media Inc.</b><small>Learn. Create. Connect.</small></div></div><a href={`${prefix}/for-you`}>{t.back}</a></div></footer>
   </main>;
 }
